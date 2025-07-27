@@ -1,0 +1,57 @@
+body {
+  font-family: 'Itim', cursive !important;
+  scroll-behavior: smooth;
+}
+
+#parceiros {
+  background-color: #f9f9f9;
+}
+
+#parceiros h2 {
+  font-family: 'Itim', cursive;
+  color: #00c853;
+  font-weight: bold;
+}
+
+.parceiro-logo {
+  max-height: 80px;
+  object-fit: contain;
+  filter: grayscale(10%);
+  transition: filter 0.3s ease;
+}
+
+.parceiro-logo:hover {
+  filter: grayscale(0%);
+}
+
+.footer {
+  background-color: #004d40;
+  color: white;
+  padding: 30px 0;
+  font-family: 'Itim', cursive;
+}
+
+.footer-logo {
+  height: 60px;
+}
+
+.footer .social-icons a {
+  color: white;
+  margin: 0 10px;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.footer .social-icons a:hover {
+  color: #00c853;
+}
+
+.footer-text {
+  font-size: 0.95rem;
+  margin-top: 15px;
+}
+
+.footer-logo mb-3 { /* tentando modificar o tamanho da logo da ONG no footer */
+  width: 200px; /* aumenta a largura */
+  height: auto; /* mantém proporção da altura */
+}

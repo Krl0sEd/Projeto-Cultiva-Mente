@@ -1,0 +1,267 @@
+body {
+  font-family: 'Itim', cursive !important;
+  scroll-behavior: smooth;
+}
+
+/* Logo se adapta melhor */
+.logo img {
+  height: 50px;
+}
+
+/* Suaviza o hover dos links do menu */
+.nav-link:hover {
+  color: #00c853 !important;
+}
+
+/* Botão DOAR responsivo */
+@media (max-width: 768px) {
+  header .container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  nav .nav {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn {
+    align-self: flex-end;
+  }
+}
+
+/* Carousel customizado */
+#carouselBanner {
+  max-height: 400px;
+  overflow: hidden;
+}
+
+#carouselBanner .carousel-item img {
+  width: 100%;
+  height: 280px; /* Altura base para celular */
+  object-fit: cover; /* Tá cortando conteúdo da imagem, o correto seria utilizar o cortain creio eu, porém a imagem não tem resolução para cobrir toda a tela e vai ficar um espaço não coberto..peço sua ajuda para resolver */
+  object-position: center top; /* Centraliza a imagem no topo só para dar uma disfarçada no primeiro banner*/
+}
+
+.instituicao-logo {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background-color: white;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 10px auto;
+  overflow: hidden;
+}
+
+.instituicao-logo img {
+  max-width: 60%;
+  max-height: 60%;
+  object-fit: contain;
+}
+
+/* Botões do carousel */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: red; /* ou white, black, etc */
+  background-size: 100% 100%;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+/* Adicional para escurecer ou clarear via filtro */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1); /* inverte cor */
+}
+
+/* Estilização dos anúncios */
+.nome-instituicao {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+.anuncio-card {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.anuncio-card:hover {
+  transform: scale(1.02);
+}
+
+.anuncio-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Quem Somos */
+#quem-somos {
+  font-family: 'Itim', cursive;
+  color: #333;
+  line-height: 1.6;
+}
+
+#quem-somos h2 {
+  font-size: 2rem;
+  color: #222;
+}
+
+.texto-quem-somos {
+  text-align: justify;
+  font-size: 1.05rem;
+  margin-bottom: 1rem;
+}
+
+.destaque-verde {
+  color: #00c853;
+  font-weight: bold;
+}
+
+.lista-beneficios {
+  list-style: none;
+  padding-left: 1rem;
+  margin-bottom: 1rem;
+}
+
+.lista-beneficios li {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 8px;
+}
+
+.lista-beneficios li::before {
+  content: "✔️";
+  position: absolute;
+  left: 0;
+  color: #00c853;
+}
+
+.frase-final {
+  display: block;
+  text-align: center;
+  font-style: italic;
+  color: #00c853;
+  font-weight: bold;
+}
+
+/* Banner secundário com conteúdo sobreposto */
+.banner-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.banner-container img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 10px;
+}
+
+.conteudo-sobre-banner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.4); /* fundo escuro transparente */
+  padding: 20px 30px;
+  border-radius: 12px;
+  max-width: 90%;
+}
+
+/* Texto da frase */
+.conteudo-sobre-banner blockquote {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  font-weight: bold;
+  font-family: 'Itim', cursive;
+}
+
+/* Botão Doar banner principal e secundário */
+.btn-doar {
+  background-color: #db4444; /* vermelho mais bonito */
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-doar:hover {
+  background-color: #b91f1f; /* tom mais escuro no hover */
+}
+
+.conteudo-sobre-banner .btn-doar {
+  background-color: #d32f2f; /* vermelho mais bonito */
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 25px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.conteudo-sobre-banner .btn-doar:hover {
+  background-color: #b71c1c; /* tom mais escuro no hover */
+}
+
+/* Ajustes de responsividade para diferentes tamanhos de tela */
+@media (min-width: 768px) {
+  #carouselBanner .carousel-item img {
+    height: 350px;
+  }
+
+  #banner-secundario img {
+    max-height: 200px;
+  }
+ 
+  .banner-container img {
+    height: 250px;
+  }
+
+  .conteudo-sobre-banner {
+    padding: 15px 20px;
+  }
+
+  .conteudo-sobre-banner blockquote {
+    font-size: 1.1rem;
+  }
+
+  .conteudo-sobre-banner .btn-doar {
+    font-size: 1rem;
+    padding: 8px 20px;
+  }
+
+}
+
+@media (min-width: 992px) {
+  #carouselBanner .carousel-item img {
+    height: 400px;
+  }
+}
+
+/* Ajustes de altura do banner para diferentes tamanhos de tela */
+@media (min-width: 768px) {
+  #carouselBanner .carousel-item img {
+    height: 350px;
+  }
+}
+
+@media (min-width: 992px) {
+  #carouselBanner .carousel-item img {
+    height: 400px;
+  }
+}
