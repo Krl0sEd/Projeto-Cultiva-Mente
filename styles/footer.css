@@ -69,3 +69,15 @@ body {
 .link-footer:hover {
   opacity: 0.8;
 }
+.link-footer.d-block{
+  color: #208a26; /* verde claro */
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.link-footer.d-block:hover {
+  color: #a5d6a7; /* verde claro mais suave ao passar o mouse */
+}

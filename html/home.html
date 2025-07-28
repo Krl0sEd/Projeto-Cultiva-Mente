@@ -61,7 +61,7 @@
         </li>
 
         <li class="nav-item">
-          <a class="nav-link text-dark fw-semibold" href="#footer">Contato</a>
+          <a class="nav-link text-dark fw-semibold" href="profissões.html">Profissões</a>
         </li>
 
       </ul>
@@ -69,6 +69,7 @@
 
     <!-- Botão de doar -->
     <a href="https://nubank.com.br" class="btn btn-doar rounded-pill px-4 fw-bold" title="Doar" alt="Redireciona para a página de doação" target="_blank" rel="noopener noreferrer">
+         <i class="bi bi-heart-fill"></i>
       Doar
        </a>
   </div>
@@ -278,24 +279,31 @@
 </section>
 
   <!-- Footer -->
-<footer class="footer mt-5" ID="footer">
+<footer class="footer mt-5" id="footer">
   <div class="container text-center">
     <a href="home.html">
-    <img src="../assets/logocultiva_semfundo.png" alt="Logo" class="footer-logo mb-3">
+      <img src="../assets/logocultiva_semfundo.png" alt="Logo" class="footer-logo mb-3">
     </a>
 
     <!-- Links de contato (redes sociais) -->
     <div class="social-icons mb-3">
-      <a href="https://www.instagram.com/cultivamentess?igsh=MXV5OGZrbTkwMGx1Nw==" aria-label="Instagram" title="Instagram" target="_blank" rel="noopener noreferrer"><i class="bi bi-instagram"></i></a>
-      <a href="#" aria-label="Facebook" title="Facebook" target="_blank"><i class="bi bi-facebook"></i></a>
-      <a href="#" aria-label="Twitter" title="Twitter" target="_blank"><i class="bi bi-twitter"></i></a>
+      <a href="https://www.instagram.com/cultivamentess?igsh=MXV5OGZrbTkwMGx1Nw==" aria-label="Instagram" title="nosso Instagram" target="_blank" rel="noopener noreferrer"><i class="bi bi-instagram"></i></a>
+      <a href="https://chat.whatsapp.com/G62cQ1uFtxr9cjHCF1ROgV" aria-label="WhatsApp" title="nosso contato de WhatsApp" target="_blank" rel="noopener noreferrer"><i class="bi bi-whatsapp"></i></a>
+      <a href="https://discord.gg/DjXvgVau" aria-label="Discord" title="nosso Discord" target="_blank" rel="noopener noreferrer"><i class="bi bi-discord"></i></a>
     </div>
 
     <!-- Texto de direitos autorais -->
     <a href="https://www.gov.br/receitafederal/pt-br/assuntos/orientacao-tributaria/cadastros/cnpj/legislacao-cnpj" target="_blank" class="link-footer" alt="link para redirecionamento para regras sobre CNPJ" title="Normas Gerais" rel="noopener noreferrer">
-    <p class="footer-text">&copy; 2025 Lootsy. Todos os direitos reservados.</p>
+      <p class="footer-text">&copy; 2025 Lootsy. Todos os direitos reservados.</p>
+    </a>
+
+    <!-- Link para anunciar -->
+    <div class="mt-2">
+      <a href="mailto:cultivamentesofc@gmail.com" class="link-footer d-block" target="_blank" rel="noopener noreferrer" title="Anuncie conosco" alt="Redireciona para o e-mail de contato para anúncios da ONG"> 
+        Anuncie conosco
+      </a>
+    </div>
   </div>
-  </a>
 </footer>
 
   <!-- Jquery e JS boostrap -->
@@ -303,6 +311,12 @@
    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 
    <!-- JS -->
-    <script src="js/home.js"></script>
+    <script src="../js/colégios.js"></script>
+    <script src="scripts/mapa-escolas.js"></script>
+<script
+  async
+  defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCC9DEr9Nwvm895p5LNetv4IY1XdJYbb4g&libraries=places&callback=initMap">
+</script>
 </body>
 </html>
