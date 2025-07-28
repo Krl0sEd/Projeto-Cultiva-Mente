@@ -106,6 +106,95 @@
   </div>
 </section>
 
+  <!-- Profissões (utilizando Bootstrap List Group com data-bs-toggle="list" para alternar abas)-->
+<main class="container my-5">
+  <div class="row">
+
+    <!-- Lista de profissões à esquerda -->
+    <div class="col-md-4 mb-4">
+      <div class="list-group" id="lista-profissoes" role="tablist">
+        <a class="list-group-item list-group-item-action active" id="tab-informatica" data-bs-toggle="list" href="#conteudo-informatica" role="tab">Informática</a>
+        <a class="list-group-item list-group-item-action" id="tab-design" data-bs-toggle="list" href="#conteudo-design" role="tab">Design Gráfico</a>
+        <a class="list-group-item list-group-item-action" id="tab-marketing" data-bs-toggle="list" href="#conteudo-marketing" role="tab">Marketing Digital</a>
+        <a class="list-group-item list-group-item-action" id="tab-rh" data-bs-toggle="list" href="#conteudo-rh" role="tab">Recursos Humanos</a>
+      </div>
+    </div>
+
+    <!-- Conteúdo à direita ( visualizados com tab-pane para evitar uso de JavaScript)-->
+    <div class="col-md-8">
+      <div class="tab-content">
+
+        <!-- Informática -->
+        <div class="tab-pane fade show active" id="conteudo-informatica" role="tabpanel">
+          <h2>Área de Informática</h2>
+          <h4 class="mt-3">📘 Principais Cursos de Graduação</h4>
+
+          <!-- Lista de cursos (usei ps-3 e mb-3 para já definir espaçamento e ainda deixar bem organizado) -->
+          <ul class="ps-3">
+            <li class="mb-3"><strong>ADS:</strong> Foco em desenvolvimento de software e sistemas.</li>
+            <li class="mb-3"><strong>Ciência da Computação:</strong> Área que estuda fundamentos teóricos e práticos da computação; Algoritmos, programação etc.</li>
+            <li class="mb-3"><strong>Engenharia da Computação:</strong> Hardware e software. Mistura conceitos da ciência da computação + engenharia elétrica.</li>
+            <li class="mb-3"><strong>Sistemas de Informação</strong> Controla e distribui redes, computadores e dados.</li>
+            <li class="mb-3"><strong>Gestão da Tecnologia da Informação:</strong> Envolve o planejamento, implementação, suporte e gerenciamento de sistemas de informação e tecnologia em uma organização.</li>
+            <li class="mb-3"><strong>Segurança da Informação:</strong> Curso tecnológico que foca na proteção de dados e sistemas contra ameaças cibernéticas.</li>
+            <li class="mb-3"><strong>Ciência de Dados:</strong> Campo multidisciplinar que usa métodos científicos, algoritmos, processos e sistemas para extrair conhecimento e insights de dados estruturados e não estruturados.</li>
+          </ul>
+
+          <!-- Dicas do que estudar para concurso...usei h2 com small class para facilitar trabalho no css -->
+          <h2 class="h4">
+              Provas e/ou Concurso 
+                <small class="text-muted ms-2 fst-italic">o que mais é pedido</small>
+                  </h2>
+          <ul>
+            <li><strong>Noções de Informática básica:</strong> Pacote Office, Sistemas Operacionais, Navegadores de internet, Segurança da informação e Noções de Hardware.</li>
+            <li><strong>Em provas mais complexas:</strong> É bom também tem conhecimento intermediário pelo menos sobre Programação e Banco de Dados.</li>
+          </ul>
+        </div>
+
+        <!-- Design Gráfico -->
+        <div class="tab-pane fade" id="conteudo-design" role="tabpanel">
+          <h2>Área de Design Gráfico</h2>
+          <ul>
+            <li><strong>Design:</strong> Identidade visual, UX/UI, publicidade.</li>
+            <li><strong>Ferramentas:</strong> Photoshop, Illustrator, Figma.</li>
+            <li><strong>Concursos:</strong> Editoração, diagramação e arte-final.</li>
+          </ul>
+        </div>
+
+        <!-- Marketing Digital -->
+        <div class="tab-pane fade" id="conteudo-marketing" role="tabpanel">
+          <h2>Área de Marketing Digital</h2>
+          <ul>
+            <li><strong>Graduação:</strong> Publicidade, Marketing, Comunicação.</li>
+            <li><strong>Ferramentas:</strong> Google Ads, Meta Business, SEO.</li>
+            <li><strong>Concursos:</strong> Comunicação digital, estratégia, análise de métricas.</li>
+          </ul>
+        </div>
+
+        <!-- RH -->
+        <div class="tab-pane fade" id="conteudo-rh" role="tabpanel">
+          <h2>Área de Recursos Humanos</h2>
+          <ul>
+            <li><strong>Gestão de Pessoas:</strong> Treinamento, liderança, motivação.</li>
+            <li><strong>Legislação:</strong> CLT, direitos trabalhistas, folha de pagamento.</li>
+            <li><strong>Concursos:</strong> Administração pública e RH estratégico.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+  <!-- Final do conteúdo principal -->
+
+  <!-- Mapa de Profissões -->
+  <section class="container my-5">
+    <h2 class="text-center mb-4">Mapa de Profissões</h2>
+    <div id="mapa-profissoes" class="map-container">
+      <div id="map"></div>
+    </div>
+  </section>
+
 <!-- Footer -->
 <footer class="footer mt-5" id="footer">
   <div class="container text-center">

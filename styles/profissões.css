@@ -49,3 +49,16 @@ body {
   height: 100%;
 }
 
+.list-group-item {
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.list-group-item:hover {
+  background-color: #e0f2f1;
+}
+
+.tab-content h2 {
+  color: #004d40;
+  margin-bottom: 20px;
+}

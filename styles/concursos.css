@@ -47,3 +47,14 @@ body {
   height: 200px;
   object-fit: cover;
 }
+
+/* Estilização da setinha para poder ver o vídeo do Nathan */
+* Animação da setinha ao abrir */
+.rotate-icon {
+  transition: transform 0.3s;
+}
+
+.collapsing + .rotate-icon,
+.collapse.show + .rotate-icon {
+  transform: rotate(180deg);
+}
