@@ -1,4 +1,4 @@
-/* Nossa fonte principal */
+/* Estilo global */ 
 body {
   font-family: 'Itim', cursive !important;
   scroll-behavior: smooth;
@@ -38,7 +38,7 @@ a.d-flex.text-green {
 }
 
 .header-custom {
-  background-color: #00d455; /* Cor de fundo do header, pode ser também: 00d455 ou 73986f */
+  background-color: #73986f; /* Cor de fundo do header, pode ser também: 00d455 ou 73986f */
 }
 
 .search-bar input {
@@ -48,6 +48,19 @@ a.d-flex.text-green {
 .access-icons i {
   cursor: pointer;
   font-size: 1.2rem;
+}
+
+/* Botão de doação */
+.btn-doar {
+  background-color: #a51b1b;
+  color: white;
+  border: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-doar:hover {
+  background-color: #a30000;
+  transform: scale(1.05);
 }
 
 /* Responsivo */

@@ -1,0 +1,78 @@
+/* Estilo global */
+body {
+  font-family: 'Itim', cursive !important;
+  scroll-behavior: smooth;
+}
+
+/* Estilização dos anúncios */
+.nome-instituicao {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+.anuncio-card {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.anuncio-card:hover {
+  transform: scale(1.02);
+}
+
+.anuncio-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Estilização das opções de colégios */
+.placeholder-card {
+  background-color: #ccc;
+  height: 120px;
+  border-radius: 10px;
+  transition: transform 0.2s ease;
+}
+
+.placeholder-card:hover {
+  transform: scale(1.03);
+  cursor: pointer;
+}
+
+.school-card {
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+  height: 100%;
+}
+
+/* Estilização dos cards dos colégios */
+.school-card img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.school-card:hover {
+  transform: translateY(-4px);
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+/* Estilização da API do mapa */
+#map {
+  box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+}
+
+/* Estilização dos ícones das escolas */
+.school-icon img {
+  background-color: white;
+}
+
+.leaflet-marker-icon[src$=".png"]:not([src*="fallback"]) {
+  content: url('../assets/icones-escolas/fallback.png');
+}

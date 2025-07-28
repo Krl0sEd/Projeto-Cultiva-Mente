@@ -1,0 +1,269 @@
+<!-- Início do HTML -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CultivaMente</title>
+
+  <!-- CSS e CSS boostrap-->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/header.css"/>
+  <link rel="stylesheet" href="../styles/concursos.css"/>
+  <link rel="stylesheet" href="../styles/footer.css"/>
+  <link rel="shortcut icon" href="../assets/logo_favicon.ico" type="image/x-icon">
+
+  <!-- Fonte -->
+   <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+</head>
+
+<!-- Início do corpo do HTML -->
+<body>
+
+  <!-- HEADER -->
+<header class="header-custom shadow-sm sticky-top">
+  <div class="container d-flex align-items-center justify-content-between flex-wrap">
+    
+    <!-- Logo e nome clicáveis -->
+<a href="home.html" class="d-flex align-items-center gap-2 text-decoration-none text-green" title="Ir para a página inicial">
+  <img src="../assets/logocultiva_semfundo.png" alt="Logo CultivaMente" height="40" />
+  <span class="fs-5 fw-bold">CultivaMente</span>
+</a>
+
+    <!-- Campo de busca -->
+    <div class="search-bar flex-grow-1 mx-4 my-2 my-md-0">
+      <input type="text" class="form-control rounded-pill px-3" placeholder="Buscar..."/>
+    </div>
+
+    <!-- Acessibilidade e botão -->
+    <div class="d-flex align-items-center gap-3">
+      <div class="access-icons d-flex gap-2 text-white">
+        <i class="bi bi-universal-access"></i>
+        <i class="bi bi-fonts"></i>
+        <i class="bi bi-moon-fill"></i>
+      </div>
+
+    <!-- Menu -->
+    <nav>
+      <ul class="nav gap-2">
+
+        <li class="nav-item">
+          <a class="nav-link text-dark fw-semibold" href="home.html">Início</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link text-dark fw-semibold" href="../html/concursos.html">Concursos</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link text-dark fw-semibold" href="colégios.html">Colégios</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link text-dark fw-semibold" href="#footer">Contato</a>
+        </li>
+
+      </ul>
+    </nav>
+
+    <!-- Botão de doar -->
+    <a href="https://nubank.com.br" class="btn btn-doar rounded-pill px-4 fw-bold" title="Doar" alt="Redireciona para a página de doação">
+      Doar
+       </a>
+  </div>
+</header>
+  <!-- Final do Header -->
+
+  <!-- Anúncios -->
+  <section id="anuncios" class="container my-4">
+  <div class="row justify-content-center">
+
+    <!-- Anúncio 1 -->
+    <div class="col-md-6 col-lg-5 mb-3">
+      <a href="https://www.xvideos.com" target="_blank" class="text-decoration-none" alt="Redireciona para a página da Adega D'ouro" title="Adega D'ouro" rel="noopener noreferrer">
+      <div class="card anuncio-card">
+        <img src="../assets/bacalhau1.jpg" class="card-img-top" alt="Anúncio 1">
+        <div class="card-body text-center">
+          <span class="badge bg-secondary">AD</span>
+        </div>
+      </div>
+      </a>
+    </div>
+
+    <!-- Anúncio 2 -->
+    <div class="col-md-6 col-lg-5 mb-3">
+      <a href="https://pt.pornhub.com" target="_blank" class="text-decoration-none" rel="noopener noreferrer" alt="Redireciona para a página da Adega D'ouro" title="Adega D'ouro">
+      <div class="card anuncio-card">
+        <img src="../assets/bacalhau2.jpg" class="card-img-top" alt="Anúncio 2">
+        <div class="card-body text-center">
+          <span class="badge bg-secondary">AD</span>
+        </div>
+      </div>
+    </div>
+    </a>
+  </div>
+</section>
+
+    <!-- Carrossel de concursos -->
+  <section class="container my-5">
+  <h2 class="text-center mb-4">Principais Concursos Disponíveis</h2>
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+    
+    <!-- Concurso 1 (ENEM) -->
+    <div class="col">
+      <div class="card h-100 text-center">
+        <img src="../assets/ENEM.png" class="card-img-top" alt="Imagem Concurso" title="Imagem da logo do ENEM">
+        <div class="card-body">
+          <h5 class="card-title">ENEM</h5>
+          <p class="card-text">Exame Nacional do Ensino Médio</p>
+          <a href="https://enem.inep.gov.br/participante/#!" class="btn btn-outline-success" target="_blank" rel="noopener noreferrer">SAIBA MAIS</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Concurso 2 (UERJ)-->
+    <div class="col">
+      <div class="card h-100 text-center">
+        <img src="../assets/UERJ_logo.png" class="card-img-top" alt="Imagem Concurso" title="Imagem da logo da UERJ">
+        <div class="card-body">
+          <h5 class="card-title">Vestibular da UERJ</h5>
+          <p class="card-text">Vestibular para ingressar na Universidade do Estado do Rio de Janeiro</p>
+          <a href="https://www.vestibular.uerj.br/?page_id=13785" class="btn btn-outline-success" target="_blank" rel="noopener noreferrer">Ver Edital</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Concurso 3 (DEGASE)-->
+    <div class="col">
+      <div class="card h-100 text-center">
+        <img src="../assets/DEGASE_logo.jpg" class="card-img-top" alt="Imagem Concurso" title="Imagem da logo do DEGASE">
+        <div class="card-body">
+          <h5 class="card-title">DEGASE</h5>
+          <p class="card-text">Concurso para poder ingressar ao órgão do governo "DEGASE"</p>
+          <a href="https://concurso.idecan.org.br/Concurso.aspx?ID=183" class="btn btn-outline-success" target="_blank" rel="noopener noreferrer">Ver Edital</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Concurso 4 (CFS)-->
+    <div class="col">
+      <div class="card h-100 text-center">
+        <img src="../assets/CFS_logo.png" class="card-img-top" alt="Imagem Concurso" title="Imagem do Concurso CFS">
+        <div class="card-body">
+          <h5 class="card-title">CFS</h5>
+          <p class="card-text">Concurso provindo pela Força áerea brasleira e pelo exército brasileiro com intuito de formar novos sargentos</p>
+          <a href="https://www.vestibular.uerj.br/?page_id=13785" class="btn btn-outline-success" target="_blank" rel="noopener noreferrer">SAIBA MAIS</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Concurso 5 (EAGS-->
+    <div class="col">
+      <div class="card h-100 text-center">
+        <img src="../assets/EAGS_logo.webp" class="card-img-top" alt="Imagem Concurso" title="Imagem do Concurso UERJ">
+        <div class="card-body">
+          <h5 class="card-title">EAGS</h5>
+          <p class="card-text">Concurso para estagiar e entrar em adaptação à Graduação de Sargento da Aeronáutica</p>
+          <a href="https://www2.fab.mil.br/eear/index.php/estagios?layout=edit&id=149" class="btn btn-outline-success" target="_blank" rel="noopener noreferrer">SAIBA MAIS</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Concurso 6 (CAP) -->
+    <div class="col">
+      <div class="card h-100 text-center">
+        <img src="../assets/CAP.jpg" class="card-img-top" alt="Imagem Concurso" title="Imagem do Concurso UERJ">
+        <div class="card-body">
+          <h5 class="card-title">CAP</h5>
+          <p class="card-text">Concurso para poder adentrar na marinha do Brasil como Corpo de Auxiliar de Praça</p>
+          <a href="https://www.grancursosonline.com.br/concurso/marinha-do-brasil-corpo-auxiliar-de-pracas-cp-cap?utm_id=18191275110&device=c&gclid=Cj0KCQjwnJfEBhCzARIsAIMtfKJ0PKCGQssMGRxr2sD17_WiVsejlgx46AXiSW6BoZeuBG2AXKvADc4aAjE_EALw_wcB&utm_source=google&utm_medium=cpc&utm_term=concurso%20cap&utm_content=177107249941&utm_campaign=Cursos%20%7C%20Pesquisa%20%7C%20espec-concursos-quentes%20%7C%20Conversão%20%7C%20Compra&hsa_acc=4813290222&hsa_cam=18191275110&hsa_grp=177107249941&hsa_ad=754951502149&hsa_src=g&hsa_tgt=kwd-2423968292040&hsa_kw=concurso%20cap&hsa_mt=b&hsa_net=adwords&hsa_ver=3&gad_source=1&gad_campaignid=18191275110" class="btn btn-outline-success" target="_blank" rel="noopener noreferrer">Ver Edital</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Concurso 7 (ESA)-->
+    <div class="col">
+      <div class="card h-100 text-center">
+        <img src="../assets/ESA_logo.png" class="card-img-top" alt="Imagem Concurso" title="Imagem do Concurso UERJ">
+        <div class="card-body">
+          <h5 class="card-title">ESA</h5>
+          <p class="card-text">Concurso para poder ingressar na escola  de formação de sargentos  da marinha</p>
+          <a href="https://concursocfgs-esa.eb.mil.br" class="btn btn-outline-success" target="_blank" rel="noopener noreferrer">SAIBA MAIS</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Concurso 8 (CBMERJ)-->
+    <div class="col">
+      <div class="card h-100 text-center">
+        <img src="../assets/CBMERJ_logo.png" class="card-img-top" alt="Imagem Concurso" title="Imagem do Concurso UERJ">
+        <div class="card-body">
+          <h5 class="card-title">Concurso da CBMERJ</h5>
+          <p class="card-text">Vestibular para ingressar na Universidade do Estado do Rio de Janeiro</p>
+          <a href="https://www.cbmerj.rj.gov.br/cursos-e-concursos" class="btn btn-outline-success" target="_blank" rel="noopener noreferrer">SAIBA MAIS</a>
+        </div>
+      </div>
+    </div>
+</section>
+
+<!-- Anúncios -->
+  <section id="anuncios" class="container my-4">
+  <div class="row justify-content-center">
+
+    <!-- Anúncio 1 -->
+    <div class="col-md-6 col-lg-5 mb-3">
+      <a href="https://www.xvideos.com" target="_blank" class="text-decoration-none" alt="Redireciona para a página da Adega D'ouro" title="Adega D'ouro" rel="noopener noreferrer">
+      <div class="card anuncio-card">
+        <img src="../assets/bacalhau1.jpg" class="card-img-top" alt="Anúncio 1">
+        <div class="card-body text-center">
+          <span class="badge bg-secondary">AD</span>
+        </div>
+      </div>
+      </a>
+    </div>
+
+    <!-- Anúncio 2 -->
+    <div class="col-md-6 col-lg-5 mb-3">
+      <a href="https://pt.pornhub.com" target="_blank" class="text-decoration-none" rel="noopener noreferrer" alt="Redireciona para a página da Adega D'ouro" title="Adega D'ouro">
+      <div class="card anuncio-card">
+        <img src="../assets/bacalhau2.jpg" class="card-img-top" alt="Anúncio 2">
+        <div class="card-body text-center">
+          <span class="badge bg-secondary">AD</span>
+        </div>
+      </div>
+    </div>
+    </a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer mt-5" ID="footer">
+  <div class="container text-center">
+    <a href="home.html">
+    <img src="../assets/logocultiva_semfundo.png" alt="Logo" class="footer-logo mb-3">
+    </a>
+
+    <!-- Links de contato (redes sociais) -->
+    <div class="social-icons mb-3">
+      <a href="https://www.instagram.com/cultivamentess?igsh=MXV5OGZrbTkwMGx1Nw==" aria-label="Instagram" title="Instagram" target="_blank" rel="noopener noreferrer"><i class="bi bi-instagram"></i></a>
+      <a href="#" aria-label="Facebook" title="Facebook" target="_blank"><i class="bi bi-facebook"></i></a>
+      <a href="#" aria-label="Twitter" title="Twitter" target="_blank"><i class="bi bi-twitter"></i></a>
+    </div>
+
+    <!-- Texto de direitos autorais -->
+    <a href="https://www.gov.br/receitafederal/pt-br/assuntos/orientacao-tributaria/cadastros/cnpj/legislacao-cnpj" target="_blank" class="link-footer" alt="link para redirecionamento para regras sobre CNPJ" title="Normas Gerais" rel="noopener noreferrer">
+    <p class="footer-text">&copy; 2025 Lootsy. Todos os direitos reservados.</p>
+  </div>
+  </a>
+</footer>
+
+  <!-- Jquery e JS boostrap -->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+   <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+   <!-- JS -->
+    <script src="../js/concursos.js"></script>
+</body>
+</html>
+

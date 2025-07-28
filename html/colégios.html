@@ -1,0 +1,467 @@
+<!-- Início do HTML -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CultivaMente</title>
+
+  <!-- Leaflet CSS -->
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+/>
+
+<!-- Leaflet JS --> 
+<script
+  src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js">
+</script>
+
+  <!-- CSS e CSS boostrap-->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/header.css"/>
+  <link rel="stylesheet" href="../styles/colégios.css"/>
+  <link rel="stylesheet" href="../styles/footer.css"/>
+  <link rel="shortcut icon" href="../assets/logo_favicon.ico" type="image/x-icon">
+
+  <!-- Fonte -->
+   <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+</head>
+
+<!-- Início do corpo do HTML -->
+<body>
+
+  <!-- HEADER -->
+<header class="header-custom shadow-sm sticky-top">
+  <div class="container d-flex align-items-center justify-content-between flex-wrap">
+    
+    <!-- Logo e nome clicáveis -->
+<a href="home.html" class="d-flex align-items-center gap-2 text-decoration-none text-green" title="Ir para a página inicial">
+  <img src="../assets/logocultiva_semfundo.png" alt="Logo CultivaMente" height="40" />
+  <span class="fs-5 fw-bold">CultivaMente</span>
+</a>
+
+    <!-- Campo de busca -->
+    <div class="search-bar flex-grow-1 mx-4 my-2 my-md-0">
+      <input type="text" class="form-control rounded-pill px-3" placeholder="Buscar..."/>
+    </div>
+
+    <!-- Acessibilidade e botão -->
+    <div class="d-flex align-items-center gap-3">
+      <div class="access-icons d-flex gap-2 text-white">
+        <i class="bi bi-universal-access"></i>
+        <i class="bi bi-fonts"></i>
+        <i class="bi bi-moon-fill"></i>
+      </div>
+
+    <!-- Menu -->
+    <nav>
+      <ul class="nav gap-2">
+
+        <li class="nav-item">
+          <a class="nav-link text-dark fw-semibold" href="home.html">Início</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link text-dark fw-semibold" href="../html/concursos.html">Concursos</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link text-dark fw-semibold" href="colégios.html">Colégios</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link text-dark fw-semibold" href="#footer">Contato</a>
+        </li>
+
+      </ul>
+    </nav>
+
+    <!-- Botão de doar -->
+    <a href="https://nubank.com.br" class="btn btn-doar rounded-pill px-4 fw-bold" title="Doar" alt="Redireciona para a página de doação">
+      Doar
+       </a>
+  </div>
+</header>
+  <!-- Final do Header -->
+
+  <!-- Anúncios -->
+  <section id="anuncios" class="container my-4">
+  <div class="row justify-content-center">
+
+    <!-- Anúncio 1 -->
+    <div class="col-md-6 col-lg-5 mb-3">
+      <a href="https://www.xvideos.com" target="_blank" class="text-decoration-none" alt="Redireciona para a página da Adega D'ouro" title="Adega D'ouro" rel="noopener noreferrer">
+      <div class="card anuncio-card">
+        <img src="../assets/bacalhau1.jpg" class="card-img-top" alt="Anúncio 1">
+        <div class="card-body text-center">
+          <span class="badge bg-secondary">AD</span>
+        </div>
+      </div>
+      </a>
+    </div>
+
+    <!-- Anúncio 2 -->
+    <div class="col-md-6 col-lg-5 mb-3">
+      <a href="https://pt.pornhub.com" target="_blank" class="text-decoration-none" rel="noopener noreferrer" alt="Redireciona para a página da Adega D'ouro" title="Adega D'ouro">
+      <div class="card anuncio-card">
+        <img src="../assets/bacalhau2.jpg" class="card-img-top" alt="Anúncio 2">
+        <div class="card-body text-center">
+          <span class="badge bg-secondary">AD</span>
+        </div>
+      </div>
+    </div>
+    </a>
+  </div>
+</section>
+
+<!-- Opções de escolas/colégios -->
+ <section class="container my-5">
+
+  <!-- Sessão 1 (Rio de Janeiro)-->
+  <div class="section-block mb-5">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <h4 class="fw-bold">Sudeste</h4>
+      <a href="#" class="text-decoration-none fs-4 text-dark">&gt;</a>
+    </div>
+
+    <!-- Colégio Pedro II -->
+    <div class="row row-cols-2 row-cols-md-4 g-3">
+      <div class="col">
+        <div class="school-card text-center p-2">
+            <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiQ2KXj396OAxV7rZUCHVwEBNwQFnoECBkQAQ&url=http%3A%2F%2Fwww.cp2.g12.br%2Findex.php&usg=AOvVaw2VdIhY1pKlX-mWkawd5rTE&cshid=1753678065064011&opi=89978449" title="DOM PEDRO II" alt="Redireciona para o site oficial do DOM PEDRO II" target="_blank" rel="noopener noreferrer">
+  <img src="../assets/DOMPEDROII_colégio.webp" alt="Colégio DOM PEDRO II" class="img-fluid rounded mb-2"/>
+    </a>
+  <h6 class="mb-1 fw-bold">Colégio DOM PEDRO II</h6>
+  <p class="text-muted small mb-0">Diversas unidades</p>
+        </div>
+            </div>
+
+    <!-- Colégio Militar do Rio de Janeiro -->  
+      <div class="col">
+        <div class="school-card text-center p-2">
+        <a href="https://www.cmrj.eb.mil.br" title="Colégio Militar do Rio de Janeiro" alt="Redireciona para o site oficial do colégio militar do Rio de Janeiro" target="_blank" rel="noopener noreferrer">  
+        <img src="../assets/colégiomilitar_RJ.jpg" alt="Redireciona para o site oficial do colégio militar do Rio de Janeiro" title="Colégio Militar do Rio de Janeiro" class="img-fluid rounded mb-2"/>
+        </a>
+        <h6 class="mb-1 fw-bold">Colégio Militar do Rio de Janeiro</h6>
+        <p class="text-muted small mb-0">Diversas unidades</p>  
+        </div>
+        </div>
+
+    <!-- Escola Municipal Roberto Burle Marx -->
+      <div class="col">
+        <div class="school-card text-center p-2">
+      <a href="https://www.instagram.com/burlemarx" title="Escola Municipal Roberto Burle Marx" alt="Redireciona para o instagram oficial da Escola Municipal Roberto Burle Marx" target="_blank" rel="noopener noreferrer">
+      <img src="../assets/robertoburle_escola" alt="Redireciona para o instagram oficial da Escola Municipal Roberto Burle Marx" title="Escola Municipal Roberto Burle Marx" class="img-fluid rounded mb-2"/>
+    </a>
+      <h6 class="mb-1 fw-bold">Escola Municipal Roberto Burle Marx</h6>
+        <p class="text-muted small mb-0">R. Franz Weissman, 80 - Curicica, Rio de Janeiro - RJ, 22775-090</p>  
+        </div>
+        </div>
+
+        <!-- Escola Municipal Rodrigues Alves -->
+      <div class="col">
+        <div class="school-card text-center p-2">
+      <a href="https://www.instagram.com/explore/locations/193385544367500/escola-municipal-rodrigues-alves" title="Escola Municipal Rodrigues Alves" alt="Redireciona para o instagram oficial da Escola Municipal Rodrigues Alves" target="_blank" rel="noopener noreferrer">
+      <img src="../assets/rodriguesalves_colégio" alt="Redireciona para o instagram oficial da Escola Municipal Rodrigues Alves" title="Escola Municipal Rodrigues Alves" class="img-fluid rounded mb-2"/>
+    </a>
+      <h6 class="mb-1 fw-bold">Escola Municipal Rodrigues Alves</h6>
+        <p class="text-muted small mb-0">Av. Gilberto Amado, S/N - Barra da Tijuca, Rio de Janeiro - RJ, 22620-060</p>  
+        </div>
+        </div>
+        </div>
+        </div>
+
+<!-- Sessão 1 (SUDESDE)-->
+  <div class="section-block mb-5">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <h4 class="fw-bold">Sudeste</h4>
+      <a href="#" class="text-decoration-none fs-4 text-dark">&gt;</a>
+    </div>
+
+    <!-- Colégio Pedro II -->
+    <div class="row row-cols-2 row-cols-md-4 g-3">
+      <div class="col">
+        <div class="school-card text-center p-2">
+            <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiQ2KXj396OAxV7rZUCHVwEBNwQFnoECBkQAQ&url=http%3A%2F%2Fwww.cp2.g12.br%2Findex.php&usg=AOvVaw2VdIhY1pKlX-mWkawd5rTE&cshid=1753678065064011&opi=89978449" title="DOM PEDRO II" alt="Redireciona para o site oficial do DOM PEDRO II" target="_blank" rel="noopener noreferrer">
+  <img src="../assets/DOMPEDROII_colégio.webp" alt="Colégio DOM PEDRO II" class="img-fluid rounded mb-2"/>
+    </a>
+  <h6 class="mb-1 fw-bold">Colégio DOM PEDRO II</h6>
+  <p class="text-muted small mb-0">Diversas unidades</p>
+        </div>
+            </div>
+
+    <!-- Colégio Militar do Rio de Janeiro -->  
+      <div class="col">
+        <div class="school-card text-center p-2">
+        <a href="https://www.cmrj.eb.mil.br" title="Colégio Militar do Rio de Janeiro" alt="Redireciona para o site oficial do colégio militar do Rio de Janeiro" target="_blank" rel="noopener noreferrer">  
+        <img src="../assets/colégiomilitar_RJ.jpg" alt="Redireciona para o site oficial do colégio militar do Rio de Janeiro" title="Colégio Militar do Rio de Janeiro" class="img-fluid rounded mb-2"/>
+        </a>
+        <h6 class="mb-1 fw-bold">Colégio Militar do Rio de Janeiro</h6>
+        <p class="text-muted small mb-0">Diversas unidades</p>  
+        </div>
+        </div>
+
+    <!-- Escola Municipal Roberto Burle Marx -->
+      <div class="col">
+        <div class="school-card text-center p-2">
+      <a href="https://www.instagram.com/burlemarx" title="Escola Municipal Roberto Burle Marx" alt="Redireciona para o instagram oficial da Escola Municipal Roberto Burle Marx" target="_blank" rel="noopener noreferrer">
+      <img src="../assets/robertoburle_escola" alt="Redireciona para o instagram oficial da Escola Municipal Roberto Burle Marx" title="Escola Municipal Roberto Burle Marx" class="img-fluid rounded mb-2"/>
+    </a>
+      <h6 class="mb-1 fw-bold">Escola Municipal Roberto Burle Marx</h6>
+        <p class="text-muted small mb-0">R. Franz Weissman, 80 - Curicica, Rio de Janeiro - RJ, 22775-090</p>  
+        </div>
+        </div>
+
+        <!-- Escola Municipal Rodrigues Alves -->
+      <div class="col">
+        <div class="school-card text-center p-2">
+      <a href="https://www.instagram.com/explore/locations/193385544367500/escola-municipal-rodrigues-alves" title="Escola Municipal Rodrigues Alves" alt="Redireciona para o instagram oficial da Escola Municipal Rodrigues Alves" target="_blank" rel="noopener noreferrer">
+      <img src="../assets/rodriguesalves_colégio" alt="Redireciona para o instagram oficial da Escola Municipal Rodrigues Alves" title="Escola Municipal Rodrigues Alves" class="img-fluid rounded mb-2"/>
+    </a>
+      <h6 class="mb-1 fw-bold">Escola Municipal Rodrigues Alves</h6>
+        <p class="text-muted small mb-0">Av. Gilberto Amado, S/N - Barra da Tijuca, Rio de Janeiro - RJ, 22620-060</p>  
+        </div>
+        </div>
+        </div>
+        </div>
+
+  <!-- Sessão 2 (Sul)-->
+  <div class="section-block mb-5">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <h4 class="fw-bold">Sul</h4>
+      <a href="#" class="text-decoration-none fs-4 text-dark">&gt;</a>
+    </div>
+
+    <!-- Colégio Pedro II -->
+    <div class="row row-cols-2 row-cols-md-4 g-3">
+      <div class="col">
+        <div class="school-card text-center p-2">
+            <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiQ2KXj396OAxV7rZUCHVwEBNwQFnoECBkQAQ&url=http%3A%2F%2Fwww.cp2.g12.br%2Findex.php&usg=AOvVaw2VdIhY1pKlX-mWkawd5rTE&cshid=1753678065064011&opi=89978449" title="DOM PEDRO II" alt="Redireciona para o site oficial do DOM PEDRO II" target="_blank" rel="noopener noreferrer">
+  <img src="../assets/DOMPEDROII_colégio.webp" alt="Colégio DOM PEDRO II" class="img-fluid rounded mb-2"/>
+    </a>
+  <h6 class="mb-1 fw-bold">Colégio DOM PEDRO II</h6>
+  <p class="text-muted small mb-0">Diversas unidades</p>
+        </div>
+            </div>
+
+    <!-- Colégio Militar do Rio de Janeiro -->  
+      <div class="col">
+        <div class="school-card text-center p-2">
+        <a href="https://www.cmrj.eb.mil.br" title="Colégio Militar do Rio de Janeiro" alt="Redireciona para o site oficial do colégio militar do Rio de Janeiro" target="_blank" rel="noopener noreferrer">  
+        <img src="../assets/colégiomilitar_RJ.jpg" alt="Redireciona para o site oficial do colégio militar do Rio de Janeiro" title="Colégio Militar do Rio de Janeiro" class="img-fluid rounded mb-2"/>
+        </a>
+        <h6 class="mb-1 fw-bold">Colégio Militar do Rio de Janeiro</h6>
+        <p class="text-muted small mb-0">Diversas unidades</p>  
+        </div>
+        </div>
+
+    <!-- Escola Municipal Roberto Burle Marx -->
+      <div class="col">
+        <div class="school-card text-center p-2">
+      <a href="https://www.instagram.com/burlemarx" title="Escola Municipal Roberto Burle Marx" alt="Redireciona para o instagram oficial da Escola Municipal Roberto Burle Marx" target="_blank" rel="noopener noreferrer">
+      <img src="../assets/robertoburle_escola" alt="Redireciona para o instagram oficial da Escola Municipal Roberto Burle Marx" title="Escola Municipal Roberto Burle Marx" class="img-fluid rounded mb-2"/>
+    </a>
+      <h6 class="mb-1 fw-bold">Escola Municipal Roberto Burle Marx</h6>
+        <p class="text-muted small mb-0">R. Franz Weissman, 80 - Curicica, Rio de Janeiro - RJ, 22775-090</p>  
+        </div>
+        </div>
+
+        <!-- Escola Municipal Rodrigues Alves -->
+      <div class="col">
+        <div class="school-card text-center p-2">
+      <a href="https://www.instagram.com/explore/locations/193385544367500/escola-municipal-rodrigues-alves" title="Escola Municipal Rodrigues Alves" alt="Redireciona para o instagram oficial da Escola Municipal Rodrigues Alves" target="_blank" rel="noopener noreferrer">
+      <img src="../assets/rodriguesalves_colégio" alt="Redireciona para o instagram oficial da Escola Municipal Rodrigues Alves" title="Escola Municipal Rodrigues Alves" class="img-fluid rounded mb-2"/>
+    </a>
+      <h6 class="mb-1 fw-bold">Escola Municipal Rodrigues Alves</h6>
+        <p class="text-muted small mb-0">Av. Gilberto Amado, S/N - Barra da Tijuca, Rio de Janeiro - RJ, 22620-060</p>  
+        </div>
+        </div>
+        </div>
+        </div>
+
+  <!-- Sessão 1 (Rio de Janeiro)-->
+  <div class="section-block mb-5">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <h4 class="fw-bold">Sudeste</h4>
+      <a href="#" class="text-decoration-none fs-4 text-dark">&gt;</a>
+    </div>
+
+    <!-- Colégio Pedro II -->
+    <div class="row row-cols-2 row-cols-md-4 g-3">
+      <div class="col">
+        <div class="school-card text-center p-2">
+            <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiQ2KXj396OAxV7rZUCHVwEBNwQFnoECBkQAQ&url=http%3A%2F%2Fwww.cp2.g12.br%2Findex.php&usg=AOvVaw2VdIhY1pKlX-mWkawd5rTE&cshid=1753678065064011&opi=89978449" title="DOM PEDRO II" alt="Redireciona para o site oficial do DOM PEDRO II" target="_blank" rel="noopener noreferrer">
+  <img src="../assets/DOMPEDROII_colégio.webp" alt="Colégio DOM PEDRO II" class="img-fluid rounded mb-2"/>
+    </a>
+  <h6 class="mb-1 fw-bold">Colégio DOM PEDRO II</h6>
+  <p class="text-muted small mb-0">Diversas unidades</p>
+        </div>
+            </div>
+
+    <!-- Colégio Militar do Rio de Janeiro -->  
+      <div class="col">
+        <div class="school-card text-center p-2">
+        <a href="https://www.cmrj.eb.mil.br" title="Colégio Militar do Rio de Janeiro" alt="Redireciona para o site oficial do colégio militar do Rio de Janeiro" target="_blank" rel="noopener noreferrer">  
+        <img src="../assets/colégiomilitar_RJ.jpg" alt="Redireciona para o site oficial do colégio militar do Rio de Janeiro" title="Colégio Militar do Rio de Janeiro" class="img-fluid rounded mb-2"/>
+        </a>
+        <h6 class="mb-1 fw-bold">Colégio Militar do Rio de Janeiro</h6>
+        <p class="text-muted small mb-0">Diversas unidades</p>  
+        </div>
+        </div>
+
+    <!-- Escola Municipal Roberto Burle Marx -->
+      <div class="col">
+        <div class="school-card text-center p-2">
+      <a href="https://www.instagram.com/burlemarx" title="Escola Municipal Roberto Burle Marx" alt="Redireciona para o instagram oficial da Escola Municipal Roberto Burle Marx" target="_blank" rel="noopener noreferrer">
+      <img src="../assets/robertoburle_escola" alt="Redireciona para o instagram oficial da Escola Municipal Roberto Burle Marx" title="Escola Municipal Roberto Burle Marx" class="img-fluid rounded mb-2"/>
+    </a>
+      <h6 class="mb-1 fw-bold">Escola Municipal Roberto Burle Marx</h6>
+        <p class="text-muted small mb-0">R. Franz Weissman, 80 - Curicica, Rio de Janeiro - RJ, 22775-090</p>  
+        </div>
+        </div>
+
+        <!-- Escola Municipal Rodrigues Alves -->
+      <div class="col">
+        <div class="school-card text-center p-2">
+      <a href="https://www.instagram.com/explore/locations/193385544367500/escola-municipal-rodrigues-alves" title="Escola Municipal Rodrigues Alves" alt="Redireciona para o instagram oficial da Escola Municipal Rodrigues Alves" target="_blank" rel="noopener noreferrer">
+      <img src="../assets/rodriguesalves_colégio" alt="Redireciona para o instagram oficial da Escola Municipal Rodrigues Alves" title="Escola Municipal Rodrigues Alves" class="img-fluid rounded mb-2"/>
+    </a>
+      <h6 class="mb-1 fw-bold">Escola Municipal Rodrigues Alves</h6>
+        <p class="text-muted small mb-0">Av. Gilberto Amado, S/N - Barra da Tijuca, Rio de Janeiro - RJ, 22620-060</p>  
+        </div>
+        </div>
+        </div>
+        </div>
+
+  <!-- Sessão 1 (Rio de Janeiro)-->
+  <div class="section-block mb-5">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <h4 class="fw-bold">Sudeste</h4>
+      <a href="#" class="text-decoration-none fs-4 text-dark">&gt;</a>
+    </div>
+
+    <!-- Colégio Pedro II -->
+    <div class="row row-cols-2 row-cols-md-4 g-3">
+      <div class="col">
+        <div class="school-card text-center p-2">
+            <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiQ2KXj396OAxV7rZUCHVwEBNwQFnoECBkQAQ&url=http%3A%2F%2Fwww.cp2.g12.br%2Findex.php&usg=AOvVaw2VdIhY1pKlX-mWkawd5rTE&cshid=1753678065064011&opi=89978449" title="DOM PEDRO II" alt="Redireciona para o site oficial do DOM PEDRO II" target="_blank" rel="noopener noreferrer">
+  <img src="../assets/DOMPEDROII_colégio.webp" alt="Colégio DOM PEDRO II" class="img-fluid rounded mb-2"/>
+    </a>
+  <h6 class="mb-1 fw-bold">Colégio DOM PEDRO II</h6>
+  <p class="text-muted small mb-0">Diversas unidades</p>
+        </div>
+            </div>
+
+    <!-- Colégio Militar do Rio de Janeiro -->  
+      <div class="col">
+        <div class="school-card text-center p-2">
+        <a href="https://www.cmrj.eb.mil.br" title="Colégio Militar do Rio de Janeiro" alt="Redireciona para o site oficial do colégio militar do Rio de Janeiro" target="_blank" rel="noopener noreferrer">  
+        <img src="../assets/colégiomilitar_RJ.jpg" alt="Redireciona para o site oficial do colégio militar do Rio de Janeiro" title="Colégio Militar do Rio de Janeiro" class="img-fluid rounded mb-2"/>
+        </a>
+        <h6 class="mb-1 fw-bold">Colégio Militar do Rio de Janeiro</h6>
+        <p class="text-muted small mb-0">Diversas unidades</p>  
+        </div>
+        </div>
+
+    <!-- Escola Municipal Roberto Burle Marx -->
+      <div class="col">
+        <div class="school-card text-center p-2">
+      <a href="https://www.instagram.com/burlemarx" title="Escola Municipal Roberto Burle Marx" alt="Redireciona para o instagram oficial da Escola Municipal Roberto Burle Marx" target="_blank" rel="noopener noreferrer">
+      <img src="../assets/robertoburle_escola" alt="Redireciona para o instagram oficial da Escola Municipal Roberto Burle Marx" title="Escola Municipal Roberto Burle Marx" class="img-fluid rounded mb-2"/>
+    </a>
+      <h6 class="mb-1 fw-bold">Escola Municipal Roberto Burle Marx</h6>
+        <p class="text-muted small mb-0">R. Franz Weissman, 80 - Curicica, Rio de Janeiro - RJ, 22775-090</p>  
+        </div>
+        </div>
+
+        <!-- Escola Municipal Rodrigues Alves -->
+      <div class="col">
+        <div class="school-card text-center p-2">
+      <a href="https://www.instagram.com/explore/locations/193385544367500/escola-municipal-rodrigues-alves" title="Escola Municipal Rodrigues Alves" alt="Redireciona para o instagram oficial da Escola Municipal Rodrigues Alves" target="_blank" rel="noopener noreferrer">
+      <img src="../assets/rodriguesalves_colégio" alt="Redireciona para o instagram oficial da Escola Municipal Rodrigues Alves" title="Escola Municipal Rodrigues Alves" class="img-fluid rounded mb-2"/>
+    </a>
+      <h6 class="mb-1 fw-bold">Escola Municipal Rodrigues Alves</h6>
+        <p class="text-muted small mb-0">Av. Gilberto Amado, S/N - Barra da Tijuca, Rio de Janeiro - RJ, 22620-060</p>  
+        </div>
+        </div>
+        </div>
+        </div>
+</section>
+
+<!-- Mapa de escolas públicas próximas -->
+<section class="container my-5">
+  <h4 class="fw-bold mb-1">
+  Escolas públicas próximas de você 
+  <span class="d-block text-secondary fs-6 fw-normal">(no raio de até 3km)</span>
+</h4>
+  <div id="map" style="height: 400px; width: 100%; border-radius: 10px; overflow: hidden;"></div>
+</section>
+
+<!-- Anúncios -->
+  <section id="anuncios" class="container my-4">
+  <div class="row justify-content-center">
+
+    <!-- Anúncio 1 -->
+    <div class="col-md-6 col-lg-5 mb-3">
+      <a href="https://www.xvideos.com" target="_blank" class="text-decoration-none" alt="Redireciona para a página da Adega D'ouro" title="Adega D'ouro" rel="noopener noreferrer">
+      <div class="card anuncio-card">
+        <img src="../assets/bacalhau1.jpg" class="card-img-top" alt="Anúncio 1">
+        <div class="card-body text-center">
+          <span class="badge bg-secondary">AD</span>
+        </div>
+      </div>
+      </a>
+    </div>
+
+    <!-- Anúncio 2 -->
+    <div class="col-md-6 col-lg-5 mb-3">
+      <a href="https://pt.pornhub.com" target="_blank" class="text-decoration-none" rel="noopener noreferrer" alt="Redireciona para a página da Adega D'ouro" title="Adega D'ouro">
+      <div class="card anuncio-card">
+        <img src="../assets/bacalhau2.jpg" class="card-img-top" alt="Anúncio 2">
+        <div class="card-body text-center">
+          <span class="badge bg-secondary">AD</span>
+        </div>
+      </div>
+    </div>
+    </a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer mt-5" ID="footer">
+  <div class="container text-center">
+    <a href="home.html">
+    <img src="../assets/logocultiva_semfundo.png" alt="Logo" class="footer-logo mb-3">
+    </a>
+
+    <!-- Links de contato (redes sociais) -->
+    <div class="social-icons mb-3">
+      <a href="https://www.instagram.com/cultivamentess?igsh=MXV5OGZrbTkwMGx1Nw==" aria-label="Instagram" title="Instagram" target="_blank" rel="noopener noreferrer"><i class="bi bi-instagram"></i></a>
+      <a href="#" aria-label="Facebook" title="Facebook" target="_blank"><i class="bi bi-facebook"></i></a>
+      <a href="#" aria-label="Twitter" title="Twitter" target="_blank"><i class="bi bi-twitter"></i></a>
+    </div>
+
+    <!-- Texto de direitos autorais -->
+    <a href="https://www.gov.br/receitafederal/pt-br/assuntos/orientacao-tributaria/cadastros/cnpj/legislacao-cnpj" target="_blank" class="link-footer" alt="link para redirecionamento para regras sobre CNPJ" title="Normas Gerais" rel="noopener noreferrer">
+    <p class="footer-text">&copy; 2025 Lootsy. Todos os direitos reservados.</p>
+  </div>
+  </a>
+</footer>
+
+  <!-- Jquery e JS boostrap -->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+   <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+   <!-- JS -->
+    <script src="../js/colégios.js"></script>
+    <script src="scripts/mapa-escolas.js"></script>
+<script
+  async
+  defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCC9DEr9Nwvm895p5LNetv4IY1XdJYbb4g&libraries=places&callback=initMap">
+</script>
+</body>
+</html>
+
