@@ -55,3 +55,16 @@ body {
   width: 200px; /* aumenta a largura */
   height: auto; /* mantém proporção da altura */
 }
+
+.link-footer { /* estilo para links sobre questões legislativas no footer */
+  text-decoration: none;  /* remove o sublinhado */
+  color: inherit;         /* usa a cor do elemento pai (do footer) */
+}
+
+.link-footer:visited {
+  color: inherit;
+}
+
+.link-footer:hover {
+  opacity: 0.8;
+}

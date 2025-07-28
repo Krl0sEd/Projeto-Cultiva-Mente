@@ -13,24 +13,6 @@ body {
   color: #00c853 !important;
 }
 
-/* Botão DOAR responsivo */
-@media (max-width: 768px) {
-  header .container {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-  }
-
-  nav .nav {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .btn {
-    align-self: flex-end;
-  }
-}
-
 /* Carousel customizado */
 #carouselBanner {
   max-height: 400px;
@@ -218,11 +200,61 @@ body {
   background-color: #b71c1c; /* tom mais escuro no hover */
 }
 
+/* Botão de redirecionamento das instituições parceiras da ONG */
+.parceiro-logo, instituicao-logo{
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.parceiro-logo:hover, .instituicao-logo:hover{
+  transform: scale(1.05);
+}
+
+/* Links de doação no banner secundário sem ficar azul e com animação simples*/
+.texto-doacao {
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.texto-doacao:visited {
+  color: inherit;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.texto-doacao:hover, .texto-doacao:focus {
+  color: #aaca1b;                /* Cor verde ao passar o mouse (ou outra cor) */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transform: scale(1.05);
+  transform: translateY(-5px);   /* Leve elevação */
+  box-shadow: 0 8px 15px rgba(42, 122, 42, 0.3);  /* Sombra suave */
+  text-decoration: none;
+  cursor: pointer;
+}
+
 /* Ajustes de responsividade para diferentes tamanhos de tela */
 @media (min-width: 768px) {
   #carouselBanner .carousel-item img {
     height: 350px;
   }
+
+  /* Botão DOAR responsivo */
+@media (max-width: 768px) {
+  header .container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  nav .nav {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn {
+    align-self: flex-end;
+  }
+}
 
   #banner-secundario img {
     max-height: 200px;
