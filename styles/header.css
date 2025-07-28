@@ -4,14 +4,37 @@ body {
   scroll-behavior: smooth;
 }
 
+/* Logo se adapta melhor */
+a.d-flex.text-green:hover,
+a.d-flex.text-green:focus {
+  color: #0f3b22; /* verde mais escuro no hover */
+  text-decoration: underline;
+  cursor: pointer;
+  filter: brightness(0.9);
+  transition: color 0.3s ease, filter 0.3s ease;
+}
+
+a.d-flex.text-green {
+  color: #136941; /* verde padrão */
+  text-decoration: none;
+  transition: color 0.3s ease, filter 0.3s ease;
+}
+
 /* Estilo da logo */
 .logo img {
   height: 50px;
 }
 
 /* Menu hover */
-.nav-link:hover {
-  color: #00c853 !important;
+.nav-link.text-dark.fw-semibold {
+  transition: color 0.3s ease;
+}
+
+.nav-link.text-dark.fw-semibold:hover, .nav-link.text-dark.fw-semibold:focus {
+  color: #c80000 !important; /* Forçar a cor no hover */
+  cursor: pointer;            /* Dá o cursor de link */
+  transition: color 0.3s ease;
+  transform: scale(1.05);
 }
 
 .header-custom {
