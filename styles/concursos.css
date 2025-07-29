@@ -49,12 +49,24 @@ body {
 }
 
 /* Estilização da setinha para poder ver o vídeo do Nathan */
-* Animação da setinha ao abrir */
 .rotate-icon {
-  transition: transform 0.3s;
+  display: inline-block;
+  transition: transform 0.3s ease-in-out;
 }
 
 .collapsing + .rotate-icon,
 .collapse.show + .rotate-icon {
   transform: rotate(180deg);
+}
+
+/* Responsividade cards*/
+@media (max-width: 576px) {
+  .card-img-top,
+  .anuncio-card img {
+    height: 140px;
+  }
+
+  .card {
+    margin-bottom: 1rem;
+  }
 }

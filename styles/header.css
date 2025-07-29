@@ -23,6 +23,11 @@ a.d-flex.text-green {
 /* Estilo da logo */
 .logo img {
   height: 50px;
+  transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+  transform: scale(1.05);
 }
 
 /* Menu hover */
@@ -80,3 +85,54 @@ a.d-flex.text-green {
     align-self: flex-end;
   }
 }
+
+/* Header responsivo (scolando com a tela) para telas menores */
+@media (max-width: 767.98px) {
+  .header-custom {
+    position: static !important; /* ou relative */
+    padding: 10px 15px;
+  }
+}
+
+/* Header para telas menores */
+@media (max-width: 576px) {
+  .header-custom {
+    padding: 0.3rem 0.5rem;
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .header-custom img {
+    height: 30px;
+  }
+
+  .header-custom span {
+    font-size: 1rem;
+  }
+
+  .search-bar {
+    display: none;
+  }
+}
+
+
+/* Header para telas menores 
+@media (max-width: 576px) {
+   .search-bar {
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+
+  nav, .btn-doar {
+    display: none;  ou transforme em menu colapsável 
+  }
+}
+
+remover Search bar
+@media (max-width: 768px) {
+  .search-bar {
+    display: none;
+  }
+}
+
+*/

@@ -23,7 +23,7 @@ body {
 #carouselBanner .carousel-item img {
   width: 100%;
   height: 280px; /* Altura base para celular */
-  object-fit: cover; /* Tá cortando conteúdo da imagem, o correto seria utilizar o cortain creio eu, porém a imagem não tem resolução para cobrir toda a tela e vai ficar um espaço não coberto..peço sua ajuda para resolver */
+  object-fit: cover; /* Corta parte da imagem para preencher. contain manteria a imagem inteira, mas pode deixar bordas vazias */
   object-position: center top; /* Centraliza a imagem no topo só para dar uma disfarçada no primeiro banner*/
 }
 
@@ -202,7 +202,7 @@ body {
 }
 
 /* Botão de redirecionamento das instituições parceiras da ONG */
-.parceiro-logo, instituicao-logo{
+.parceiro-logo, .instituicao-logo{
   cursor: pointer;
   transition: transform 0.2s ease;
 }
@@ -214,11 +214,6 @@ body {
 /* Links de doação no banner secundário sem ficar azul e com animação simples*/
 .texto-doacao {
   text-decoration: none;
-  color: inherit;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.texto-doacao:visited {
   color: inherit;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -238,8 +233,16 @@ body {
   #carouselBanner .carousel-item img {
     height: 350px;
   }
+}
 
-  /* Botão DOAR responsivo */
+/* Ajustes de responsividade para diferentes tamanhos de tela */
+@media (min-width: 992px) {
+  #carouselBanner .carousel-item img {
+    height: 400px;
+  }
+}
+
+/* Botão DOAR responsivo */
 @media (max-width: 768px) {
   header .container {
     flex-direction: column;
@@ -255,8 +258,6 @@ body {
   .btn {
     align-self: flex-end;
   }
-}
-
   #banner-secundario img {
     max-height: 200px;
   }
@@ -278,23 +279,4 @@ body {
     padding: 8px 20px;
   }
 
-}
-
-@media (min-width: 992px) {
-  #carouselBanner .carousel-item img {
-    height: 400px;
-  }
-}
-
-/* Ajustes de altura do banner para diferentes tamanhos de tela */
-@media (min-width: 768px) {
-  #carouselBanner .carousel-item img {
-    height: 350px;
-  }
-}
-
-@media (min-width: 992px) {
-  #carouselBanner .carousel-item img {
-    height: 400px;
-  }
 }

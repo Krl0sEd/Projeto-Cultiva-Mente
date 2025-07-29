@@ -62,3 +62,41 @@ body {
   color: #004d40;
   margin-bottom: 20px;
 }
+
+/* Barrinha lateral para mostrar que lista de profissões é arrastável */
+#lista-profissoes::-webkit-scrollbar {
+  height: 6px;
+}
+
+#lista-profissoes::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 3px;
+}
+
+/* Um padding lateral extra para evitar corte lateral do primeiro/último item */
+#lista-profissoes {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Responsividade para a lista de profissões em aparelhos móveis */
+@media (max-width: 768px) {
+  #lista-profissoes {
+    display: flex;
+    flex-direction: row !important;
+    overflow-x: auto;
+    white-space: nowrap;
+    scroll-snap-type: x mandatory;
+    gap: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  #lista-profissoes .list-group-item,
+  #lista-profissoes a {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    min-width: 150px;
+    text-align: center;
+  }
+}  
+

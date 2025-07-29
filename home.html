@@ -2,9 +2,16 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+
+  <!-- Metadados -->
   <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="HOME da plataforma da CultivaMente.">
+  <meta name="author" content="ONG CultivaMente">
+  <meta name="robots" content="index, follow">
+  <meta name="keywords" content="colégios, escolas, educação, Brasil, CultivaMente, mapa interativo, colégios públicos, colégios privados, ensino básico, ensino médio">
+
+  <!-- Título da página -->
   <title>CultivaMente</title>
 
   <!-- CSS e CSS boostrap-->
@@ -13,7 +20,15 @@
   <link rel="stylesheet" href="styles/header.css"/>
   <link rel="stylesheet" href="styles/home.css"/>
   <link rel="stylesheet" href="styles/footer.css"/>
+
+  <!-- Favicon -->
   <link rel="shortcut icon" href="assets/logo_favicon.ico" type="image/x-icon">
+  <link rel="icon" href="assets/logo_favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="assets/logo_favicon.ico"> 
+
+  <!-- Preconnect para fontes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <!-- Fonte -->
    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
@@ -40,9 +55,9 @@
     <!-- Acessibilidade e botão -->
     <div class="d-flex align-items-center gap-3">
       <div class="access-icons d-flex gap-2 text-white">
-        <i class="bi bi-universal-access"></i>
-        <i class="bi bi-fonts"></i>
-        <i class="bi bi-moon-fill"></i>
+        <i class="bi bi-universal-access" aria-label="Opções de acessibilidade" role="button"></i>
+        <i class="bi bi-fonts" aria-label="Alternar tamanho da fonte" role="button"></i>
+        <i class="bi bi-moon-fill" aria-label="Alternar modo escuro" role="button"></i>
       </div>
 
     <!-- Menu -->
@@ -62,14 +77,14 @@
         </li>
 
         <li class="nav-item">
-          <a class="nav-link text-dark fw-semibold" href="profissões.html">Profissões</a>
+          <a class="nav-link text-dark fw-semibold" href="profissoes.html">Profissões</a>
         </li>
 
       </ul>
     </nav>
 
     <!-- Botão de doar -->
-    <a href="qrpix.html" class="btn btn-doar rounded-pill px-4 fw-bold" title="Doar" alt="Redireciona para a página de doação" target="_blank" rel="noopener noreferrer">
+    <a href="qrpix.html" class="btn btn-doar rounded-pill px-4 fw-bold" title="Doar" alt="Redireciona para a página de doação">
          <i class="bi bi-heart-fill"></i>
       Doar
        </a>
@@ -151,7 +166,7 @@
 
     <!-- Item 3: Profissões -->
     <div class="col-6 col-sm-4 col-md-2 mb-4">
-      <a href="profissões.html" class="text-decoration-none text-dark" alt="Redireciona para a página de profissões" title="Profissões">
+      <a href="profissoes.html" class="text-decoration-none text-dark" alt="Redireciona para a página de profissões" title="Profissões">
       <div class="instituicao-logo">
         <img src="assets/profissões.png" alt="ONGs Parceiras">
       </div>
@@ -167,7 +182,7 @@
   <div class="row justify-content-center">
 
     <!-- Anúncio 1 -->
-    <div class="col-md-6 col-lg-5 mb-3">
+    <div class="col-sm-10 col-md-6 col-lg-5">
       <a href="https://www.xvideos.com" target="_blank" class="text-decoration-none" alt="Redireciona para a página da Adega D'ouro" title="Adega D'ouro" rel="noopener noreferrer">
       <div class="card anuncio-card">
         <img src="assets/bacalhau1.jpg" class="card-img-top" alt="Anúncio 1">
@@ -179,7 +194,7 @@
     </div>
 
     <!-- Anúncio 2 -->
-    <div class="col-md-6 col-lg-5 mb-3">
+    <div class="col-sm-10 col-md-6 col-lg-5">
       <a href="https://pt.pornhub.com" target="_blank" class="text-decoration-none" rel="noopener noreferrer" alt="Redireciona para a página da Adega D'ouro" title="Adega D'ouro">
       <div class="card anuncio-card">
         <img src="assets/bacalhau2.jpg" class="card-img-top" alt="Anúncio 2">
