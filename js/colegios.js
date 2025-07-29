@@ -72,27 +72,13 @@ document.addEventListener("DOMContentLoaded", function () {
             const imagemEscola = gerarCaminhoDoIcone(nome);
             const fallbackIcone = "assets/school_png.avif";
 
-            // Verifica se o ícone personalizado existe
-            fetch(imagemEscola, { method: "HEAD" })
-              .then((res) => {
-                const iconeFinal = res.ok ? imagemEscola : fallbackIcone;
+            const popupContent = `
+              <strong>${nome}</strong><br>
+              ${endereco || "Endereço não informado"}<br>
+              <img src="${imagemEscola}" alt="${nome}" width="100" style="margin-top:5px; border-radius:8px;" onerror="this.src='${fallbackIcone}'">
+            `;
 
-                const popupContent = `
-                  <strong>${nome}</strong><br>
-                  ${endereco || "Endereço não informado"}<br>
-                  <img src="${iconeFinal}" alt="${nome}" width="100" style="margin-top:5px; border-radius:8px;">
-                `;
-
-                adicionarEscolaAoMapa(lat, lon, iconeFinal, popupContent);
-              })
-              .catch(() => {
-                const popupContent = `
-                  <strong>${nome}</strong><br>
-                  ${endereco || "Endereço não informado"}<br>
-                  <img src="${fallbackIcone}" alt="${nome}" width="100" style="margin-top:5px; border-radius:8px;">
-                `;
-                adicionarEscolaAoMapa(lat, lon, fallbackIcone, popupContent);
-              });
+            adicionarEscolaAoMapa(lat, lon, fallbackIcone, popupContent);
           });
         })
         .catch((err) => {

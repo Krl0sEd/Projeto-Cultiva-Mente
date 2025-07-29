@@ -74,5 +74,41 @@ body {
 }
 
 .leaflet-marker-icon[src$=".png"]:not([src*="fallback"]) {
-  content: url('../assets/icones-escolas/fallback.png');
+  content: url('assets/icones-escolas/fallback.png');
 }
+
+/* Responsividades básicas (Ajustar altura das imagens nos anúncios e escolas) */
+@media (max-width: 576px) {
+  .anuncio-card img,
+  .school-card img {
+    height: 150px; /* ou até 100px, se preferir */
+  }
+
+/* Reduzir sombra e espaçamento dos cards */
+  .anuncio-card,
+  .school-card {
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+    margin-bottom: 1rem;
+  }
+
+/* Diminuir font-size em nomes ou títulos para evitar quebras */
+  .nome-instituicao {
+    font-size: 12px;
+  }
+
+  .card-title {
+    font-size: 1rem;
+  }
+
+  .card-text {
+    font-size: 0.9rem;
+  }
+}
+
+/* Ajustar altura do mapa em telas menores */
+@media (max-width: 768px) {
+  #map {
+    height: 300px;
+  }
+}
+
