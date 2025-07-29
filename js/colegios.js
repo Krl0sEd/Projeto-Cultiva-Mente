@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const endereco = `${rua}${numero ? ", " + numero : ""}${cidade ? " - " + cidade : ""}`;
 
             const imagemEscola = gerarCaminhoDoIcone(nome);
-            const fallbackIcone = "../assets/school_png.avif";
+            const fallbackIcone = "assets/school_png.avif";
 
             // Verifica se o ícone personalizado existe
             fetch(imagemEscola, { method: "HEAD" })
