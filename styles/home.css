@@ -18,13 +18,19 @@ body {
 #carouselBanner {
   max-height: 400px;
   overflow: hidden;
+  position: relative;
+  z-index: 1; /* Coloca o banner atrás das sugestões */
 }
 
 #carouselBanner .carousel-item img {
   width: 100%;
-  height: 280px; /* Altura base para celular */
+  max-height: 400px;   /* altura ideal para desktop */
+  height: auto; /* permite que a imagem mantenha proporção */
   object-fit: cover; /* Corta parte da imagem para preencher. contain manteria a imagem inteira, mas pode deixar bordas vazias */
-  object-position: center top; /* Centraliza a imagem no topo só para dar uma disfarçada no primeiro banner*/
+  object-position: center; /* Centraliza a imagem só para dar uma disfarçada no primeiro banner*/
+  border-radius: 10px;
+  position: relative;
+  z-index: 1; /* Coloca o banner atrás das sugestões */
 }
 
 .instituicao-logo {
@@ -142,6 +148,7 @@ body {
   width: 100%;
   overflow: hidden;
   border-radius: 10px;
+  z-index: 1; /* Garante que o banner fique ABAIXO de outros elementos */
 }
 
 .banner-container img {
@@ -228,6 +235,28 @@ body {
   cursor: pointer;
 }
 
+/* Estilizando a barra de rolagem horizontal (compatível com WebKit) */
+.scrollable-element {
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+/* Barra de rolagem personalizada para Chrome, Edge e Safari */
+.scrollable-element::-webkit-scrollbar {
+  height: 8px; /* altura para barra horizontal */
+}
+
+.scrollable-element::-webkit-scrollbar-track {
+  background: #f0f0f0; /* cor de fundo */
+}
+
+.scrollable-element::-webkit-scrollbar-thumb {
+  background-color: #aaa; /* cor da “alça” */
+  border-radius: 4px;
+}
+
+/* Firefox vai usar a barra padrão, sem erro */
+
 /* Ajustes de responsividade para diferentes tamanhos de tela */
 @media (min-width: 768px) {
   #carouselBanner .carousel-item img {
@@ -259,24 +288,45 @@ body {
     align-self: flex-end;
   }
   #banner-secundario img {
-    max-height: 200px;
+    max-height: none;
+    height: auto;
+    aspect-ratio: 16 / 9; /* Mantém proporção agradável */
+    object-fit: cover; /* Corta parte da imagem para preencher */
   }
  
   .banner-container img {
-    height: 250px;
+    height: auto;
+    max-height: 250px;
+    object-fit: cover;
   }
 
   .conteudo-sobre-banner {
-    padding: 15px 20px;
+    padding: 10px 15px;
+    width: 95%;
   }
 
   .conteudo-sobre-banner blockquote {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 
   .conteudo-sobre-banner .btn-doar {
-    font-size: 1rem;
-    padding: 8px 20px;
+    font-size: 0.95rem;
+    padding: 6px 16px;
   }
 
 }
+
+/* Altura menor dos banners do carousel em mobile */
+@media (max-width: 576px) {
+  .carousel-item img {
+    max-height: 250px;
+  }
+}
+
+/* Ajustes de tamanho das dos banners do carousel deve ficar com os seguintes resultados: 
+
+Mobile: altura 250px
+
+Tablet: 350px
+
+Desktop: 400px */

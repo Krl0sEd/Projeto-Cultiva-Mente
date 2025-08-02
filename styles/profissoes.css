@@ -79,6 +79,28 @@ body {
   padding-right: 1rem;
 }
 
+/* Estilizando a barra de rolagem horizontal (compatível com WebKit) */
+.scrollable-element {
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+/* Barra de rolagem personalizada para Chrome, Edge e Safari */
+.scrollable-element::-webkit-scrollbar {
+  height: 8px; /* altura para barra horizontal */
+}
+
+.scrollable-element::-webkit-scrollbar-track {
+  background: #f0f0f0; /* cor de fundo */
+}
+
+.scrollable-element::-webkit-scrollbar-thumb {
+  background-color: #aaa; /* cor da “alça” */
+  border-radius: 4px;
+}
+
+/* Firefox vai usar a barra padrão, sem erro */
+
 /* Responsividade para a lista de profissões em aparelhos móveis */
 @media (max-width: 768px) {
   #lista-profissoes {

@@ -46,13 +46,37 @@ a.d-flex.text-green {
   background-color: #73986f; /* Cor de fundo do header, pode ser também: 00d455 ou 73986f */
 }
 
+/* Search Bar */
 .search-bar input {
   max-width: 500px;
+}
+
+.search-bar {
+  position: relative; /* contexto para o dropdown absoluto funcionar */
+  z-index: 10;
+}
+  
+  #sugestoes {
+  max-height: 250px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ccc;
+  border-top: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 9999;  
+  top: 100%; /* abaixo do input */
+  left: 0;
 }
 
 .access-icons i {
   cursor: pointer;
   font-size: 1.2rem;
+  color: white !important;
+  transition: color 0.3s ease;
+}
+
+.access-icons i:hover {
+  color: #aaca1b !important; /* Verde limão suave ao passar o mouse */
 }
 
 /* Botão de doação */
@@ -68,7 +92,57 @@ a.d-flex.text-green {
   transform: scale(1.05);
 }
 
-/* Responsivo */
+/* Estilizando a barra de rolagem horizontal (compatível com WebKit) */
+.scrollable-element {
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+/* Barra de rolagem personalizada para Chrome, Edge e Safari */
+.scrollable-element::-webkit-scrollbar {
+  height: 8px; /* altura para barra horizontal */
+}
+
+.scrollable-element::-webkit-scrollbar-track {
+  background: #f0f0f0; /* cor de fundo */
+}
+
+.scrollable-element::-webkit-scrollbar-thumb {
+  background-color: #aaa; /* cor da “alça” */
+  border-radius: 4px;
+}
+
+/* Botões do header funcioanais e belos */
+.btn-icon {
+  background: transparent;
+  border: none;
+  padding: 4px;
+  font-size: 1.3rem;
+  cursor: pointer;
+  color: white;
+}
+
+.btn-icon:focus {
+  outline: 2px dashed #fff;
+  outline-offset: 2px;
+}
+
+.access-icons .btn {
+  color: #ffffff !important; /* Branco puro para melhor contraste */
+  background-color: transparent;
+  border: none;
+  padding: 6px 8px;
+  font-size: 1.3rem;
+  transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+}
+
+.access-icons .btn:hover {
+  color: #d4ff00 !important; /* Verde limão claro no hover */
+  background-color: rgba(255, 255, 255, 0.15); /* Leve fundo para feedback visual */
+  transform: scale(1.1);
+}
+
+/* Responsividade */
 @media (max-width: 768px) {
   header .container {
     flex-direction: column;
@@ -114,7 +188,6 @@ a.d-flex.text-green {
     display: none;
   }
 }
-
 
 /* Header para telas menores 
 @media (max-width: 576px) {
