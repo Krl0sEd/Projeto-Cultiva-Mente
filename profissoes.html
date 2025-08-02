@@ -47,10 +47,21 @@
   <span class="fs-5 fw-bold">CultivaMente</span>
 </a>
 
-    <!-- Campo de busca -->
-    <div class="search-bar flex-grow-1 mx-4 my-2 my-md-0">
-      <input type="text" class="form-control rounded-pill px-3" placeholder="Buscar..."/>
-    </div>
+    <!-- Search Bar -->
+  <form class="d-flex search-bar flex-grow-1 mx-4 my-2 my-md-0 position-relative" style="z-index: 1055;" role="search" onsubmit="buscarGoogle(event)">
+
+  <!-- Campo de busca -->
+  <input type="text" id="campoBusca" class="form-control rounded-start-pill px-3" placeholder="Buscar colégios, escolas, faculdades..."></input>
+
+  <!--- Search Bar (sugestões)-->
+  <div id="sugestoes" class="list-group position-absolute w-100" style="top: 100%; z-index: 1060; background-color: white; max-height: 300px; overflow-y: auto;">
+  </div>
+
+  <!-- Lupa de busca -->
+  <button type="submit" class="btn btn-success rounded-end-pill px-3" aria-label="Opções de acessibilidade" alt="Buscar" title="Buscar colégios, escolas, faculdades...">
+    <i class="bi bi-search"></i>
+  </button>
+</form>
 
     <!-- Acessibilidade e botão -->
     <div class="access-icons d-flex gap-2 text-white">
@@ -263,6 +274,9 @@
   <!-- Jquery e JS boostrap -->
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+  <!-- JS -->
+  <script src="js/header.js"></script>
 
 </body>
 </html>
