@@ -2,6 +2,86 @@
 body {
   font-family: 'Itim', cursive !important;
   scroll-behavior: smooth;
+  font-size: 1rem;
+}
+
+html {
+  font-size: 100%; /* valor base */
+}
+
+/* Reset básico */
+:root {
+  font-size: 100%;
+}
+
+body {
+  font-size: 1rem;
+}
+
+/* barrinha do botão de a+ e a- a fonte */
+#fontSizeSliderContainer {
+  position: absolute;
+  top: 3.75rem; /* ajuste conforme posição do ícone */
+  right: 3.75rem;
+  z-index: 9999;
+  background-color: #fff;
+  border-radius: 0.625rem;
+  box-shadow: 0 0 0.94rem rgba(0, 0, 0, 0.15);
+  padding: 0.75rem;
+  transition: opacity 0.2s ease;
+}
+
+#fontSizeSliderContainer label {
+  font-size: 12px;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+#fontSizeLabel {
+  font-size: 12px;
+  margin-bottom: 4px;
+  color: #333;
+}
+
+/* Botão de resetar tamanho de fonte */
+#resetFontBtn  {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  font-weight: bold;
+  border: 1px solid #aaa;
+}
+
+/* Fonte Dislexica */
+body.dyslexic-font * {
+    font-family: 'OpenDyslexic', sans-serif !important;
+  }
+
+  body.reduced-motion * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+
+  body.reduced-motion .carousel,
+  body.reduced-motion #anuncios-superior,
+  body.reduced-motion .banner,
+  body.reduced-motion .anuncio-card {
+  display: none !important;
+  }
+
+/* Menu de acessibilidade */
+  #accessibilityMenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 2000;
+    background: white;
+    border-radius: 0.5rem;
+  }
+
+  #accessibilityMenu button {
+  color: #212529 !important; /* texto preto padrão Bootstrap */
+  border-color: #ccc;
 }
 
 /* Logo se adapta melhor */
@@ -140,6 +220,81 @@ a.d-flex.text-green {
   color: #d4ff00 !important; /* Verde limão claro no hover */
   background-color: rgba(255, 255, 255, 0.15); /* Leve fundo para feedback visual */
   transform: scale(1.1);
+}
+
+/* Caixa sobre leitura de voz da página */
+#leituraStatus{
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 260px;
+  max-height: 150px;
+  padding: 12px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  border-radius: 12px;
+  font-size: 14px;
+  line-height: 1.4;
+  overflow-y: auto;
+  z-index: 9999;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+#leituraTexto{
+  margin-top: 5px;
+}
+
+#pararLeitura{
+  margin-top: 10px;
+  padding: 4px 10px;
+  background: #e74c3c;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+/* Darkmode */
+.dark-mode {
+  background-color: #121212;
+  color: #f0f0f0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark-mode .btn-outline-light {
+  border-color: #ccc;
+  color: #f0f0f0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark-mode .btn-outline-light:hover {
+  background-color: #333;
+  color: #fff;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Estilo do header em modo escuro */
+.dark-mode .header-custom {
+  background-color: #1e1e1e !important;
+  color: #f0f0f0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Links e textos no header no dark mode */
+.dark-mode .header-custom a,
+.dark-mode .header-custom .nav-link,
+.dark-mode .header-custom .btn,
+.dark-mode .header-custom .access-icons i {
+  color: #f0f0f0 !important;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Ícones ao passar o mouse no modo escuro */
+.dark-mode .header-custom .access-icons i:hover {
+  color: #aaca1b !important;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Responsividade */

@@ -31,6 +31,8 @@
 
   <!-- Fonte -->
    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+     <!-- Fonte Disléxica -->
+     <link href="https://cdn.jsdelivr.net/gh/antijingoist/open-dyslexic/webkit.css" rel="stylesheet" />
 </head>
   <style>
     body {
@@ -52,5 +54,12 @@
 </head>
 <body>
   <h1>Ainda não programado</h1>
+
+  <!-- Acessibilidade da leitura da página -->
+     <div id="leituraStatus"><strong>Lendo:</strong>
+  <div id="leituraTexto"></div>
+  <button onclick="pararLeitura()" id="pararLeitura">Parar</button>
+</div>
+
 </body>
 </html>

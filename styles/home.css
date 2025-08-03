@@ -4,6 +4,20 @@ body {
   scroll-behavior: smooth;
 }
 
+/* Fonte base relativa */
+html {
+  font-size: 100%; /* Fonte base relativa */
+}
+
+/* Reset básico */
+:root {
+  font-size: 100%;
+}
+
+body {
+  font-size: 1rem;
+}
+
 /* Logo se adapta melhor */
 .logo img {
   height: 50px;
@@ -70,7 +84,7 @@ body {
 
 /* Estilização dos anúncios */
 .nome-instituicao {
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 500;
   margin-bottom: 0;
 }

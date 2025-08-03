@@ -1,4 +1,4 @@
-// Quando a pessoa digita e pressiona Enter, faz busca no Google
+// -------------------- BUSCA NO GOOGLE --------------------
 function buscarGoogle(event) {
   event.preventDefault();
   const termo = document.getElementById("campoBusca").value.trim();
@@ -8,7 +8,8 @@ function buscarGoogle(event) {
   }
 }
 
-// Listas de sugestões fixas
+// -------------------- LISTA DE SUGESTÕES FIXAS --------------------
+
 const faculdades = [
   // Públicas Federais
   "Universidade de São Paulo (USP)",
@@ -317,6 +318,7 @@ const sitesEstagios = [
   "Programa de Estágio Banco do Brasil"
 ];
 
+// -------------------- AUTOCOMPLETE --------------------
 // Junta e remove duplicados
 const sugestoesFixas = [...new Set([...faculdades, ...escolas, ...concursos, ...sites, ...sitesEmprego, ...sitesJovemAprendiz, ...sitesEstagios])];
 
@@ -359,3 +361,250 @@ document.addEventListener("click", function (e) {
     container.innerHTML = "";
   }
 });
+
+// -------------------- MENU DE ACESSIBILIDADE --------------------
+// Seleciona o botão e o menu de acessibilidade
+  const toggleBtn = document.getElementById("accessibilityToggle");
+  const menu = document.getElementById("accessibilityMenu");
+
+  // Alternar menu ao clicar no botão
+  toggleBtn.addEventListener("click", (e) => {
+    e.stopPropagation(); // evita que feche imediatamente
+    menu.style.display = menu.style.display === "block" ? "none" : "block";
+  });
+
+  // Fechar o menu se clicar fora
+  document.addEventListener("click", (e) => {
+    if (!menu.contains(e.target) && e.target !== toggleBtn) {
+      menu.style.display = "none";
+    }
+  });
+
+  // -------------------- ACESSIBILIDADE --------------------
+  // Leitura da página (text-to-speech)
+  let leituraAtiva = false;
+  let utteranceAtual = null;
+
+ function speakPage() {
+  const synth = window.speechSynthesis;
+  if (!synth) {
+    alert("Leitor de texto não suportado neste navegador.");
+    return;
+  }
+
+  if (leituraAtiva) {
+    synth.cancel();
+    leituraAtiva = false;
+    document.getElementById("leituraStatus").style.display = "none";
+    return;
+  }
+
+  const content = document.querySelector("main")?.innerText || document.body.innerText;
+  if (!content.trim()) {
+    alert("Não há conteúdo para ler.");
+    return;
+  }
+
+  utteranceAtual = new SpeechSynthesisUtterance(content);
+  utteranceAtual.lang = "pt-BR";
+
+  leituraAtiva = true;
+
+  const statusBox = document.getElementById("leituraStatus");
+  const textoBox = document.getElementById("leituraTexto");
+  textoBox.innerText = "";
+  statusBox.style.display = "block";
+
+  // Atualizar texto conforme vai lendo
+  utteranceAtual.onboundary = (event) => {
+    const spoken = content.substring(0, event.charIndex + event.charLength || 0);
+    textoBox.innerText = spoken.slice(-300); // Mostra os últimos 300 caracteres
+  };
+
+  utteranceAtual.onend = () => {
+    leituraAtiva = false;
+    statusBox.style.display = "none";
+  };
+
+  synth.speak(utteranceAtual);
+}
+
+function pararLeitura() {
+  if (window.speechSynthesis) {
+    window.speechSynthesis.cancel();
+  }
+  leituraAtiva = false;
+  document.getElementById("leituraStatus").style.display = "none";
+}
+
+  // Ativar/desativar fonte disléxica
+  function toggleDyslexicFont() {
+    document.body.classList.toggle("dyslexic-font");
+  }
+
+  // Ativar/desativar modo distração reduzida
+  function toggleReducedMotion() {
+    document.body.classList.toggle("reduced-motion");
+  }
+
+// -------------------- SLIDER DE TAMANHO DA FONTE --------------------
+const sliderContainer = document.getElementById("fontSizeSliderContainer");
+const fontSizeSlider = document.getElementById("fontSizeSlider");
+const fontSizeLabel = document.getElementById("fontSizeLabel");
+const fontSizeToggleBtn = document.getElementById("fontSizeToggleBtn");
+const resetFontBtn = document.getElementById("resetFontBtn"); // se estiver usando botão de reset
+
+// Alternar visibilidade do slider
+fontSizeToggleBtn.addEventListener("click", (e) => {
+  e.stopPropagation(); // impedir que o clique feche imediatamente
+  sliderContainer.style.display =
+    sliderContainer.style.display === "none" ? "block" : "none";
+});
+
+// Esconde o slider ao clicar fora
+document.addEventListener("click", (e) => {
+  if (
+    !sliderContainer.contains(e.target) &&
+    !fontSizeToggleBtn.contains(e.target)
+  ) {
+    sliderContainer.style.display = "none";
+  }
+});
+
+// Aplicar valor salvo, se houver
+const fontSaved = localStorage.getItem("userFontSize");
+if (fontSaved) {
+  document.documentElement.style.fontSize = fontSaved + "%";
+  fontSizeSlider.value = fontSaved;
+  fontSizeLabel.textContent = "Tamanho: " + fontSaved + "%";
+}
+
+// Atualizar tamanho da fonte
+fontSizeSlider.addEventListener("input", () => {
+  const percent = fontSizeSlider.value;
+  document.documentElement.style.fontSize = percent + "%";
+  fontSizeLabel.textContent = "Tamanho: " + percent + "%";
+  localStorage.setItem("userFontSize", percent);
+});
+
+// (Opcional) Botão de reset
+if (resetFontBtn) {
+  resetFontBtn.addEventListener("click", () => {
+    document.documentElement.style.fontSize = "100%";
+    fontSizeSlider.value = 100;
+    fontSizeLabel.textContent = "Tamanho: 100%";
+    localStorage.removeItem("userFontSize");
+  });
+}
+
+// ------------------ FONTE DISLÉXICA (com LocalStorage + botão visual) ------------------
+
+function applyDyslexicFont(enabled) {
+  const btn = document.getElementById("dyslexicBtn");
+
+  if (enabled) {
+    document.body.classList.add("dyslexic-font");
+    localStorage.setItem("useDyslexicFont", "true");
+    if (btn) {
+      btn.classList.remove("btn-outline-dark");
+      btn.classList.add("btn-success");
+      btn.textContent = "✅ Fonte Disléxica Ativada";
+    }
+  } else {
+    document.body.classList.remove("dyslexic-font");
+    localStorage.setItem("useDyslexicFont", "false");
+    if (btn) {
+      btn.classList.remove("btn-success");
+      btn.classList.add("btn-outline-dark");
+      btn.textContent = "👁️‍🗨️ Fonte Disléxica";
+    }
+  }
+}
+
+function toggleDyslexicFont() {
+  const isActive = document.body.classList.contains("dyslexic-font");
+  applyDyslexicFont(!isActive);
+}
+
+// Aplica a configuração salva ao carregar a página
+document.addEventListener("DOMContentLoaded", () => {
+  const saved = localStorage.getItem("useDyslexicFont");
+  if (saved === "true") {
+    applyDyslexicFont(true);
+  }
+});
+
+// ------------------ DISTRAÇÃO REDUZIDA (manter LocalStorage + botão visual) ------------------
+
+function applyReducedMotion(enabled) {
+  const btn = document.getElementById("reducedMotionBtn");
+
+  if (enabled) {
+    document.body.classList.add("reduced-motion");
+    localStorage.setItem("useReducedMotion", "true");
+
+    if (btn) {
+      btn.classList.remove("btn-outline-dark");
+      btn.classList.add("btn-success");
+      btn.innerHTML = "✅ Distração Reduzida Ativada";
+    }
+  } else {
+    document.body.classList.remove("reduced-motion");
+    localStorage.setItem("useReducedMotion", "false");
+
+    if (btn) {
+      btn.classList.remove("btn-success");
+      btn.classList.add("btn-outline-dark");
+      btn.innerHTML = "🚫🌀 Distração Reduzida";
+    }
+  }
+}
+
+function toggleReducedMotion() {
+  const isActive = document.body.classList.contains("reduced-motion");
+  applyReducedMotion(!isActive);
+}
+
+// Aplica ao carregar a página, se estiver ativado
+if (localStorage.getItem("useReducedMotion") === "true") {
+  applyReducedMotion(true);
+}
+
+// ------------------ MODO ESCURO ------------------
+function applyDarkMode(enabled) {
+  const icon = document.getElementById("darkModeIcon");
+  const btn = document.getElementById("darkModeToggle");
+
+  if (enabled) {
+    document.body.classList.add("dark-mode");
+    localStorage.setItem("darkMode", "true");
+
+    if (icon) icon.className = "bi bi-sun-fill";
+    if (btn) {
+      btn.classList.remove("btn-outline-light");
+      btn.classList.add("btn-outline-warning");
+    }
+  } else {
+    document.body.classList.remove("dark-mode");
+    localStorage.setItem("darkMode", "false");
+
+    if (icon) icon.className = "bi bi-moon-fill";
+    if (btn) {
+      btn.classList.remove("btn-outline-warning");
+      btn.classList.add("btn-outline-light");
+    }
+  }
+}
+
+function toggleDarkMode() {
+  const isDark = document.body.classList.contains("dark-mode");
+  applyDarkMode(!isDark);
+}
+
+// Aplica ao carregar a página
+if (localStorage.getItem("darkMode") === "true") {
+  applyDarkMode(true);
+}
+
+// Ativa o botão
+document.getElementById("darkModeToggle").addEventListener("click", toggleDarkMode);

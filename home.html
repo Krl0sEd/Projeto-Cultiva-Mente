@@ -14,6 +14,9 @@
   <!-- Título da página -->
   <title>CultivaMente</title>
 
+   <!-- Fonte Disléxica -->
+<link href="https://cdn.jsdelivr.net/gh/antijingoist/open-dyslexic/webkit.css" rel="stylesheet" />
+
   <!-- CSS e CSS boostrap-->
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
@@ -63,23 +66,42 @@
   </button>
 </form>
 
-    <!-- Acessibilidade e botão -->
-    <div class="access-icons d-flex gap-2 text-white">
+ <!-- Acessibilidade com menu -->
+<div class="access-icons d-flex gap-2 text-white position-relative">
 
-      <!-- Botão de acessibilidade -->
-  <button class="btn btn-sm" aria-label="Opções de acessibilidade">
+  <!-- Botão principal -->
+  <button class="btn btn-sm text-white" aria-label="Opções de acessibilidade" id="accessibilityToggle" title="Opções de acessibilidade">
     <i class="bi bi-universal-access"></i>
   </button>
 
-  <!-- Botão de alterar tamanho da fonte -->
-  <button class="btn btn-sm" aria-label="Alternar tamanho da fonte">
-    <i class="bi bi-fonts"></i>
+  <!-- Menu de acessibilidade (com as 3 opções) -->
+  <div id="accessibilityMenu" class="dropdown-menu p-3 shadow" style="display: none; min-width: 220px;">
+    <button class="btn btn-outline-dark w-100 mb-2"id="dyslexicBtn" onclick="toggleDyslexicFont()">👁️‍🗨️ Fonte Disléxica</button>
+    <button class="btn btn-outline-dark w-100 mb-2" id="reducedMotionBtn" onclick="toggleReducedMotion()">🚫🌀 Distração Reduzida</button>
+    <button class="btn btn-outline-dark w-100" onclick="speakPage()">🔊 Leitura da Página</button>
+  </div>
+
+ <!-- Botão de alterar tamanho da fonte -->
+<button id="fontSizeToggleBtn" class="btn btn-sm btn-outline-light text-start" aria-label="Ajustar tamanho da fonte">
+  <i class="bi bi-fonts"></i>
+</button>
+
+<!-- Painel flutuante com botão de reset + slider -->
+<div id="fontSizeSliderContainer" style="display: none; background-color: white; width: 140px;" class="p-3 rounded shadow">
+  <!-- Botão de resetar fonte -->
+  <button id="resetFontBtn" class="btn btn-sm btn-danger w-100 mb-2">
+    Redefinir
   </button>
 
+  <!-- Label e slider -->
+  <label for="fontSizeSlider" class="form-label text-dark text-center w-100" id="fontSizeLabel">Tamanho: 100%</label>
+  <input type="range" id="fontSizeSlider" min="50" max="200" value="100" step="5" class="form-range"/>
+</div>
+
   <!-- Botão de alternar modo escuro -->
-  <button class="btn btn-sm" aria-label="Alternar modo escuro">
-    <i class="bi bi-moon-fill"></i>
-  </button>
+<button id="darkModeToggle" class="btn btn-sm btn-outline-light" aria-label="Alternar modo escuro">
+  <i id="darkModeIcon" class="bi bi-moon-fill"></i>
+</button>
 </div>
 
     <!-- Menu -->
@@ -347,7 +369,14 @@
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 
-  <!-- JS -->
+    <!-- Acessibilidade da leitura da página -->
+     <div id="leituraStatus"><strong>Lendo:</strong>
+  <div id="leituraTexto"></div>
+  <button onclick="pararLeitura()" id="pararLeitura">Parar</button>
+</div>
+
+   <!-- JS -->
     <script src="js/header.js"></script>
+
 </body>
 </html>
