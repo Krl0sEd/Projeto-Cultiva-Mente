@@ -364,3 +364,98 @@ remover Search bar
 }
 
 */
+
+/* Header responsivo para telas no modo paisagem */
+@media screen and (max-width: 768px) and (orientation: landscape) {
+  .header-custom {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .header-custom .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap; /* garante quebra em telas pequenas */
+  gap: 1rem;
+}
+
+  .header-custom .search-bar {
+    display: none;
+  }
+
+  .search-bar {
+  flex: 1; /* ocupa espaço restante entre logo e ícones */
+  display: flex;
+  justify-content: center;
+}
+
+.search-bar input {
+  max-width: 500px;
+  width: 100%;
+}
+
+  .header-custom nav {
+    order: 2;
+    text-align: center;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .header-custom .acessibilidade-botoes {
+    order: 3;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 0.75rem;
+  }
+
+  .header-custom .btn-doar {
+    order: 4;
+    display: flex;
+    justify-content: center;
+    margin: 0.5rem auto;
+  }
+
+  .header-custom .logo {
+    order: 1;
+  }
+}
+
+/* Header responsivo para telas no modo paisagem  (tirar para ver qual fica melhor) */
+@media (max-width: 992px) and (orientation: landscape) {
+  .header-custom .container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .search-bar {
+    flex: 1 1 100%;
+    display: flex;
+    justify-content: center;
+    margin: 0.5rem 0;
+    order: 2; /* opcional para forçar a posição central abaixo da logo */
+  }
+
+  .access-icons, nav, .btn-doar {
+    order: 3;
+  }
+
+  .header-custom a,
+  .header-custom nav,
+  .btn-doar {
+    align-self: center;
+  }
+
+  .access-icons {
+    align-items: center;
+  }
+}

@@ -53,13 +53,18 @@
   </style>
 </head>
 <body>
-  <h1>Ainda não programado</h1>
+  <div class="text-center">
+    <h1 class="mb-4">Ainda não programado</h1>
+
+    <button onclick="history.back()" class="btn btn-secondary">
+      <i class="bi bi-arrow-left"></i> Voltar
+    </button>
+  </div>
 
   <!-- Acessibilidade da leitura da página -->
-     <div id="leituraStatus"><strong>Lendo:</strong>
-  <div id="leituraTexto"></div>
-  <button onclick="pararLeitura()" id="pararLeitura">Parar</button>
-</div>
-
+  <div id="leituraStatus"><strong>Lendo:</strong>
+    <div id="leituraTexto"></div>
+    <button onclick="pararLeitura()" id="pararLeitura">Parar</button>
+  </div>
 </body>
-</html>
+
