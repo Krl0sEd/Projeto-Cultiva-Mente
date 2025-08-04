@@ -608,3 +608,5 @@ if (localStorage.getItem("darkMode") === "true") {
 
 // Ativa o botão
 document.getElementById("darkModeToggle").addEventListener("click", toggleDarkMode);
+
+// Finalizado o script
