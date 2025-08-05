@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://krl0sed.github.io/Projeto-Cultiva-Mente/sitemap.xml
