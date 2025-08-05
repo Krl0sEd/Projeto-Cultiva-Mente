@@ -1,0 +1,22 @@
+//Sitemap para o Google Search Console
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://krl0sed.github.io/Projeto-Cultiva-Mente/</loc>
+  </url>
+  <url>
+    <loc>https://krl0sed.github.io/Projeto-Cultiva-Mente/profissoes.html</loc>
+  </url>
+  <url>
+    <loc>https://krl0sed.github.io/Projeto-Cultiva-Mente/colégios.html</loc>
+  </url>
+  <url>
+    <loc>https://krl0sed.github.io/Projeto-Cultiva-Mente/concursos.html</loc>
+  </url>
+  <url>
+    <loc>https://krl0sed.github.io/Projeto-Cultiva-Mente/cursos.html</loc>
+  </url>
+  <url>
+    <loc>https://krl0sed.github.io/Projeto-Cultiva-Mente/qrpix.html</loc>
+  </url>
+</urlset>
