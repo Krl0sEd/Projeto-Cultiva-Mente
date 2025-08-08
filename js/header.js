@@ -617,4 +617,12 @@ if (localStorage.getItem("darkMode") === "true") {
 // Ativa o botão
 document.getElementById("darkModeToggle").addEventListener("click", toggleDarkMode);
 
+// ------------------ ALERTA DE LÍNGUA ------------------
+const lang = navigator.language || navigator.userLanguage;
+
+  if (!lang.startsWith("pt")) {
+    alert("Esta página está em português. Versão em inglês em breve!");
+  }
+
+
 // Finalizado o script
