@@ -79,6 +79,12 @@ const escolas = [
   // Escolas Públicas Estaduais e Municipais
   "Escola Estadual Paulo Freire",
   "Escola Municipal Monteiro Lobato",
+  "Escola Municipal Jaime Costa",
+  "Escola Municipal professor Souza da Silveira",
+  "Escola Municipal Antônio Pereira",
+  "Escola Municipal João Kopke",
+  "Escola Especial Municipal Maurício de Medeiros",
+  "Escola Municipal Maranhão",
   "Escola Estadual Rui Barbosa",
   "Escola Municipal Machado de Assis",
   "Escola Estadual Castro Alves",
@@ -93,6 +99,8 @@ const escolas = [
 
   // Colégios Técnicos, Federais e de Aplicação
   "Colégio Pedro II - RJ",
+  "Instituto de Educação Carmela Dutra - RJ",
+  "CE Professora Maria Nazareth Cavalcanti Silva",
   "Escola Técnica Estadual (ETEC)",
   "Colégio Técnico da Unicamp (COTUCA)",
   "Colégio Técnico Industrial (CTI) - Bauru",
