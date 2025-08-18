@@ -59,9 +59,10 @@ Confira mais detalhes em **LICENSE**.
 ## 👨‍💻 Autor
 
 **Carlos Eduardo de Oliveira Bucazio**
-💻 Estudante de **Análise e Desenvolvimento de Sistemas** | Foco em **Desenvolvimento Web & Redes**
-📧 Email: [cbucazio@gmail.com](mailto:cbucazio@gmail.com)
-🌐 GitHub: [Krl0sEd](https://github.com/Krl0sEd)
-🧑‍💼 Linkedin: [linkedin.com/in/carlos-eduardo-de-oliveira-bucazio-516a7937a](https://www.linkedin.com/in/carlos-eduardo-de-oliveira-bucazio-516a7937a)
+- 💻 Estudante de **Análise e Desenvolvimento de Sistemas** | Foco em **Desenvolvimento Web & Redes**
+- 📧 **Email**: [cbucazio@gmail.com](mailto:cbucazio@gmail.com)
+- 🌐 **GitHub**: [Krl0sEd](https://github.com/Krl0sEd)
+- 🧑‍💼 **Linkedin**: [linkedin.com/in/carlos-eduardo-de-oliveira-bucazio-516a7937a](https://www.linkedin.com/in/carlos-eduardo-de-oliveira-bucazio-516a7937a)
+
 
 ---
