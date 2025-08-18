@@ -16,14 +16,14 @@ O projeto nasceu da vontade de transformar a busca por informação em algo mais
 
 ## 💡 Funcionalidades em desenvolvimento
 
-✔️ Layout responsivo (desktop e mobile)
-✔️ Header fixo e navegação fluida
-✔️ Sidebar de áreas profissionais
-✔️ Cards modernos e interativos
-✔️ Botão de doação via PIX (qrpix.html)
-🔜 Integração com banco de dados
-🔜 Expansão e atualizações recorrentes do catálogo de profissões, colégios e concursos
-🔜 Área de anúncios (“Anuncie Conosco”) mais completa
+- ✔️ Layout responsivo (desktop e mobile)
+- ✔️ Header fixo e navegação fluida
+- ✔️ Sidebar de áreas profissionais
+- ✔️ Cards modernos e interativos
+- ✔️ Botão de doação via PIX (qrpix.html)
+- 🔜 Integração com banco de dados
+- 🔜 Expansão e atualizações recorrentes do catálogo de profissões, colégios e concursos
+- 🔜 Área de anúncios (“Anuncie Conosco”) mais completa
 
 ---
 
